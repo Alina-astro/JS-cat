@@ -123,22 +123,40 @@ console.log(total); //Выведет 15
 //Задание 12
 // Напишите стрелочную функцию calculateSquare, которая будет принимать один параметр num. Внутри функции объявите локальную переменную result и присвойте ей значение, равное квадрату числа num. Затем верните значение переменной result из функции.
 
+const calculateSquare = (num) => {
+	const resultSquare = num ** 2;
+	return resultSquare;
+}
 const squaredNumber = calculateSquare(5);
 
 console.log(squaredNumber); // Выведет 25
 
 //Задание 13
 // Напишите  стрелочную функцию sayThree, которая будет выводить в консоль сообщение "Три!"
+const sayThree = () => {
+	console.log("Три!");
+}
+sayThree();
 
 //Задание 14
 // Напишите функцию findAnimal, которая будет выводить в консоль значения переменных cat и rabbit. Переменная cat объявлена внутри функции, а переменная rabbit объявлена во внешней области видимости.
+const rabbit = 'кролик';
+function findAnimal() {
+	const cat = 'кот';
+	console.log(cat, rabbit);
+}
+findAnimal(); 
+
 
 //Задание 15
 // Допишите программу, которая вычисляет сколько лет прошло с летней олимпиады в Токио, Япония. Подсказка: 1. нужно создать переменную с текущим годом. 2. при вызове функции в круглые скобки нужно передать два параметра: текущий год и год летней олимпиады в Токио.
 const lastOlympicsYear = 2021;
-
-function calculateYearsSinceLastOlympics(a, b) {}
-
+const thisYear = 2024;
+function calculateYearsSinceLastOlympics() {
+	const a = thisYear;
+	const b = lastOlympicsYear;
+	return a - b;
+}
 console.log(
 	'С момента летней олимпиады в Токио прошло ' + calculateYearsSinceLastOlympics() + ' года',
 );
@@ -146,11 +164,28 @@ console.log(
 //Задание 16
 // Напишите программу, которая вычисляет возраст пользователя на основе его года рождения, будет выводить результат в консоль.
 const friendYearOfBirth = 1985;
-
-function calculateAge() {}
+function calculateAge() {
+	const k = thisYear;
+	const l = friendYearOfBirth;
+	return k-l;
+}
+console.log(calculateAge());
 
 //Задание 17
 // Напишите функцию которая принимает ваш год рождения и возвращает ваш возраст. Обратите ваше внимание, что в глобальной зоне видимости есть переменная с текущим годом.
-
+const myYearOfBirth = 1988;
+function calculateMyAge() {
+	const x = thisYear;
+	const y = myYearOfBirth;
+	return x-y;
+}
+console.log(calculateMyAge());
 //Задание 18
 // Напишите функцию, которая должна возводить число в заданную степень. Результат должен выводить в консоль в формате: console.log("Результат: " + result);
+const numb = 10;
+function calc(f){
+	const resultCalc = numb ** f;
+	console.log(`Результат: + ${resultCalc}`);
+	return resultCalc;
+}
+calc(3);
