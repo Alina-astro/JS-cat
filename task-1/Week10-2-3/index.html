@@ -18,11 +18,14 @@
         <div class="box">
             <img id="cat" src="./assets/images/cat-01.jpg" alt="cat">
             <div class="button">
-                <button onclick="firstImage()">Previous</button>
-                <button onclick="secondImage()">Next</button>
+                <button onclick="prevImage()">Previous</button>
+                <button onclick="nextImage()">Next</button>
             </div>
         </div>
-
+        <div class="container__cost">
+            <button onclick="calculateTotalPrice()">TOTAL COST</button>
+            <p id="text"></p>
+        </div>
     </main>
 
     <script src="./script.js"></script>

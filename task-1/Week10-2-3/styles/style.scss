@@ -4,12 +4,12 @@ body {
   height: 100%;
   background-color: rgba(86, 32, 50, 0.603);
   font-family: Courier, monospace;
+  color: azure;
   header {
     height: 10vh;
     h1 {
       text-align: center;
       font-size: 35px;
-      color: azure;
     }
   }
   main {
@@ -21,15 +21,15 @@ body {
       gap: 20px;
       margin-bottom: 30px;
       img {
-        width: 300px;
+        width: 500px;
       }
       .button {
-        width: 300px;
+        width: 500px;
         display: flex;
         justify-content: space-between;
         button {
-          width: 100px;
-          height: 30px;
+          width: 140px;
+          height: 35px;
           border-radius: 10px;
           background-color: rgba(139, 52, 81, 0.603);
           color: azure;
@@ -37,31 +37,22 @@ body {
           cursor: pointer;
         }
       }
-      .box-gallery {
-        width: 600px;
-        margin: 20px auto;
-        text-align: center;
-        .box-gallery__img {
-          width: 100%;
-          display: none;
-        }
-        .box-gallery__img:first-child {
-          display: block;
-        }
-      }
-      .box__button {
-        width: 600px;
-        display: flex;
-        justify-content: space-between;
-        button {
-          width: 180px;
-          height: 40px;
-          border-radius: 10px;
-          background-color: rgba(139, 52, 81, 0.603);
-          color: azure;
-          font-size: 15px;
-          cursor: pointer;
-        }
+    }
+    .container__cost {
+      border: 2px solid rgba(86, 32, 50, 0.603);
+      margin: 30px auto;
+      width: 500px;
+      height: 200px;
+      text-align: center;
+      button {
+        margin: 30px auto;
+        width: 180px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: rgba(139, 52, 81, 0.603);
+        color: azure;
+        font-size: 15px;
+        cursor: pointer;
       }
     }
   }
