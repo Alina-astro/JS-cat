@@ -185,7 +185,8 @@ console.log(calculateMyAge());
 const numb = 10;
 function calc(f){
 	const resultCalc = numb ** f;
-	console.log(`Результат: + ${resultCalc}`);
+	console.log(`Результат: ${resultCalc}`);
 	return resultCalc;
 }
 calc(3);
+calc(4);
