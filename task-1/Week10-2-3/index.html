@@ -15,6 +15,7 @@
         <h1>Welcome</h1>
     </header>
     <main>
+        <!-- Практическое задание 3 -->
         <div class="box">
             <img id="cat" src="./assets/images/cat-01.jpg" alt="cat">
             <div class="button">
@@ -22,10 +23,21 @@
                 <button onclick="nextImage()">Next</button>
             </div>
         </div>
-        <div class="container__cost">
+        <!-- *** Задание под звёздочкой -->
+        <div class="container-cost">
             <button onclick="calculateTotalPrice()">TOTAL COST</button>
             <p id="text"></p>
         </div>
+        <!-- *** Задание под звёздочкой, другой вариант -->
+        <div class="container-price">
+            <span>Введите количество </span>
+            <input type="number" min="1" id="qt">
+            <span>Введите цену </span>
+            <input type="number" min="1" id="pr">
+            <button onclick="calculateTotalCost()">TOTAL COST</button>
+            <p id="value"></p>
+        </div>
+
     </main>
 
     <script src="./script.js"></script>

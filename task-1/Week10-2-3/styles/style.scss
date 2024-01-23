@@ -6,7 +6,7 @@ body {
   font-family: Courier, monospace;
   color: azure;
   header {
-    height: 10vh;
+    height: 6vh;
     h1 {
       text-align: center;
       font-size: 35px;
@@ -38,14 +38,41 @@ body {
         }
       }
     }
-    .container__cost {
+    .container-cost {
       border: 2px solid rgba(86, 32, 50, 0.603);
-      margin: 30px auto;
+      margin: 10px auto;
       width: 500px;
-      height: 200px;
+      height: 100px;
       text-align: center;
       button {
-        margin: 30px auto;
+        margin: 10px auto;
+        width: 180px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: rgba(139, 52, 81, 0.603);
+        color: azure;
+        font-size: 15px;
+        cursor: pointer;
+      }
+    }
+    .container-price {
+      border: 2px solid rgba(86, 32, 50, 0.603);
+      margin: 20px auto;
+      padding-top: 20px;
+      width: 500px;
+      height: 140px;
+      text-align: center;
+      span {
+        font-size: 14px;
+      }
+      #qt {
+        width: 50px;
+      }
+      #pr {
+        width: 120px;
+      }
+      button {
+        margin: 20px auto 10px;
         width: 180px;
         height: 40px;
         border-radius: 10px;
