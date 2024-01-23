@@ -13,9 +13,6 @@ body header h1 {
   font-size: 35px;
   color: azure;
 }
-body main {
-  height: 80vh;
-}
 body main .box {
   text-align: center;
   height: 70px;
@@ -23,15 +20,11 @@ body main .box {
 body main .box .box__button {
   width: 120px;
   height: 40px;
-  background-color: rgba(135, 16, 56, 0.774);
-  border: 2px solid rgba(81, 10, 33, 0.774);
+  background-color: rgba(139, 52, 81, 0.603);
   border-radius: 10px;
-  color: pink;
+  color: azure;
   font-size: 20px;
   cursor: pointer;
-}
-body main .box .box__button:active {
-  border: 4px solid rgba(81, 10, 33, 0.774);
 }
 body main .container {
   height: 400px;
@@ -43,20 +36,47 @@ body main .container {
 body main .container .container__button {
   width: 120px;
   height: 40px;
-  background-color: rgba(106, 70, 132, 0.774);
-  border: 2px solid rgba(62, 49, 75, 0.774);
+  background-color: rgba(139, 52, 81, 0.603);
   border-radius: 10px;
-  color: rgb(249, 233, 196);
+  color: azure;
   font-size: 20px;
   cursor: pointer;
-}
-body main .container .container__button:active {
-  border: 4px solid rgba(62, 49, 75, 0.774);
 }
 body main .container #image01 {
   width: 500px;
   margin-top: 20px;
 }
-body footer {
-  height: 10vh;
+body main .box-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+body main .box-wrap .box-gallery {
+  width: 600px;
+  margin: 20px auto;
+  text-align: center;
+}
+body main .box-wrap .box-gallery .box-gallery__img {
+  width: 100%;
+  display: none;
+}
+body main .box-wrap .box-gallery .box-gallery__img:first-child {
+  display: block;
+}
+body main .box-wrap .button {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+}
+body main .box-wrap .button button {
+  width: 180px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: rgba(139, 52, 81, 0.603);
+  color: azure;
+  font-size: 15px;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

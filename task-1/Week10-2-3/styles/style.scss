@@ -13,27 +13,53 @@ body {
     }
   }
   main {
-    height: 80vh;
     .box {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: 20px;
-      .box__img {
-        width: 500px;
+      margin-bottom: 30px;
+      img {
+        width: 300px;
       }
-      .box__button {
-        width: 500px;
+      .button {
+        width: 300px;
         display: flex;
         justify-content: space-between;
         button {
-          width: 120px;
-          height: 50px;
+          width: 100px;
+          height: 30px;
           border-radius: 10px;
           background-color: rgba(139, 52, 81, 0.603);
           color: azure;
-          font-size: 20px;
+          font-size: 15px;
+          cursor: pointer;
+        }
+      }
+      .box-gallery {
+        width: 600px;
+        margin: 20px auto;
+        text-align: center;
+        .box-gallery__img {
+          width: 100%;
+          display: none;
+        }
+        .box-gallery__img:first-child {
+          display: block;
+        }
+      }
+      .box__button {
+        width: 600px;
+        display: flex;
+        justify-content: space-between;
+        button {
+          width: 180px;
+          height: 40px;
+          border-radius: 10px;
+          background-color: rgba(139, 52, 81, 0.603);
+          color: azure;
+          font-size: 15px;
           cursor: pointer;
         }
       }
