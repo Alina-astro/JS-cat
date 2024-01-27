@@ -12,17 +12,25 @@
 
 </head>
 
-<body>
+<body id="body">
     <header>
-        <h1>Welcome</h1>
+        <div class="transp"></div>
+        <h1 id="main-heading">Welcome</h1>
+        <div class="bg-wrap">
+            <img src="./assets/images/sun.png" alt="sun" id="bg-day" onclick="changeBgDay()">
+            <img src="./assets/images/moon.png" alt="moon" id="bg-night" onclick="changeBgNight()">
+        </div>
     </header>
     <main>
-        <div class="box">
-            <button class="box__button" onclick="alert('ОТПРАВЛЕНО')">SEND</button>
-        </div>
-        <div class="container">
-            <button class="container__button" onclick="openImage()">OPEN</button>
+        <div class="wrap-box">
+            <div class="box">
+                <button class="box__button" onclick="alert('ОТПРАВЛЕНО')">SEND</button>
+                <button class="box__button" onclick="openImage()">OPEN</button>
+            </div>
             <img id="image01" src="./assets/images/image02.jpg" alt="kyoto">
+        </div>
+        <div class="box-btn">
+            <button id="button-test-toggle" onclick="changeBtn()">I like it</button>
         </div>
         <div class="box-wrap">
             <div class="box-gallery">

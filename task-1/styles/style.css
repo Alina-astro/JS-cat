@@ -7,33 +7,52 @@ body {
 }
 body header {
   height: 10vh;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body header .transp {
+  border: 2px solid transparent;
+  width: 80px;
+  height: 40px;
 }
 body header h1 {
   text-align: center;
   font-size: 35px;
   color: azure;
 }
-body main .box {
-  text-align: center;
-  height: 70px;
-}
-body main .box .box__button {
-  width: 120px;
+body header .bg-wrap {
+  border: 2px solid azure;
+  border-radius: 20px;
+  width: 80px;
   height: 40px;
-  background-color: rgba(139, 52, 81, 0.603);
-  border-radius: 10px;
-  color: azure;
-  font-size: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body header .bg-wrap #bg-day {
+  width: 30px;
+  height: 30px;
   cursor: pointer;
 }
-body main .container {
-  height: 400px;
+body header .bg-wrap #bg-night {
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+}
+body main .wrap-box {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start;
 }
-body main .container .container__button {
+body main .wrap-box .box {
+  display: flex;
+  justify-content: space-around;
+  width: 500px;
+}
+body main .wrap-box .box .box__button {
   width: 120px;
   height: 40px;
   background-color: rgba(139, 52, 81, 0.603);
@@ -42,9 +61,27 @@ body main .container .container__button {
   font-size: 20px;
   cursor: pointer;
 }
-body main .container #image01 {
+body main .wrap-box #image01 {
   width: 500px;
   margin-top: 20px;
+}
+body main .box-btn {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+body main .box-btn button {
+  width: 180px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: rgba(139, 52, 81, 0.603);
+  color: azure;
+  font-size: 16px;
+  cursor: pointer;
+}
+body main .box-btn .maroon {
+  background-color: rgba(83, 5, 68, 0.937);
+  color: pink;
 }
 body main .box-wrap {
   display: flex;

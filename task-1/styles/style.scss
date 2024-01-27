@@ -6,44 +6,82 @@ body {
   font-family: Courier, monospace;
   header {
     height: 10vh;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .transp {
+      border: 2px solid transparent;
+      width: 80px;
+      height: 40px;
+    }
     h1 {
       text-align: center;
       font-size: 35px;
       color: azure;
     }
-  }
-  main {
-    .box {
-      text-align: center;
-      height: 70px;
-      .box__button {
-        width: 120px;
-        height: 40px;
-        background-color: rgba(139, 52, 81, 0.603);
-        border-radius: 10px;
-        color: azure;
-        font-size: 20px;
+    .bg-wrap {
+      border: 2px solid azure;
+      border-radius: 20px;
+      width: 80px;
+      height: 40px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      #bg-day {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+      }
+      #bg-night {
+        width: 26px;
+        height: 26px;
         cursor: pointer;
       }
     }
-    .container {
-      height: 400px;
+  }
+  main {
+    .wrap-box {
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
-      justify-content: flex-start;
-      .container__button {
-        width: 120px;
-        height: 40px;
-        background-color: rgba(139, 52, 81, 0.603);
-        border-radius: 10px;
-        color: azure;
-        font-size: 20px;
-        cursor: pointer;
+      .box {
+        display: flex;
+        justify-content: space-around;
+        width: 500px;
+        .box__button {
+          width: 120px;
+          height: 40px;
+          background-color: rgba(139, 52, 81, 0.603);
+          border-radius: 10px;
+          color: azure;
+          font-size: 20px;
+          cursor: pointer;
+        }
       }
       #image01 {
         width: 500px;
         margin-top: 20px;
+      }
+    }
+    .box-btn {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      button {
+        width: 180px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: rgba(139, 52, 81, 0.603);
+        color: azure;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .maroon {
+        background-color: rgba(83, 5, 68, 0.937);
+        color: pink;
       }
     }
     .box-wrap {
