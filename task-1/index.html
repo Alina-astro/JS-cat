@@ -14,6 +14,7 @@
 
 <body id="body">
     <header>
+        <!----------------------------------- Change Title and Background-Color -->
         <div class="transp"></div>
         <h1 id="main-heading">Welcome</h1>
         <div class="bg-wrap">
@@ -22,6 +23,7 @@
         </div>
     </header>
     <main>
+        <!----------------------------------- Change Image -->
         <div class="wrap-box">
             <div class="box">
                 <button class="box__button" onclick="alert('ОТПРАВЛЕНО')">SEND</button>
@@ -32,6 +34,7 @@
         <div class="box-btn">
             <button id="button-test-toggle" onclick="changeBtn()">I like it</button>
         </div>
+        <!----------------------------------- Carousel -->
         <div class="box-wrap">
             <div class="box-gallery">
                 <img class="box-gallery__img" src="./assets/images/cat-01.jpg" alt="cat">
@@ -46,6 +49,16 @@
                 <button class="next" onclick="nextImage()">Next</button>
             </div>
         </div>
+        <!----------------------------------- To do list -->
+        <div class="box-input">
+            <div>
+                <input type="text" id="taskInput" placeholder="Add new task" />
+                <ul id="taskList"></ul>
+            </div>
+            <button id="addButton">ADD</button>
+
+        </div>
+        <!-------------------------------------------------->
     </main>
     <footer></footer>
 
