@@ -269,6 +269,10 @@ document.querySelector('.b-21').onclick = makeTwentyOne;
 //Подсказка: Используйте метод hasAttribute для проверки наличия атрибута
 const task22Practicum = document.getElementById('practicum22');
 function makeTwentyTwo() {
+	const task22Check = task22Practicum.hasAttribute('src');
+	const result22 = document.getElementById('result22');
+	result22.textContent = `Атрибут "src" присутствует: ${task22Check}`;
+	// `Атрибут "src" присутствует: ${task22Check}`;
 	//1 шаг: Найдите элемент
 	//2 шаг: Создайте переменную, которая проверяет наличие атрибута у найденного элемента
 	//3 шаг: Найдите элемент, в который нужно вставить значение
@@ -280,8 +284,9 @@ document.querySelector('.b-22').onclick = makeTwentyTwo;
 //Задание 23
 //Используйте метод getElementById, чтобы найти элемент <a>. Удалите атрибут "href" ссылки.
 //Подсказка: Используйте метод removeAttribute для удаления атрибута
-
+const task23Practicum = document.getElementById('practicum23');
 function makeTwentyThree() {
+	task23Practicum.removeAttribute('href');
 	//Ваш код
 }
 
@@ -290,8 +295,9 @@ document.querySelector('.b-23').onclick = makeTwentyThree;
 //Задание 24
 //Используйте метод getElementById, чтобы найти элемент <input>. Установите атрибут "value" текстового поля на значение "Новое значение".
 //Подсказка: Используйте метод setAttribute для установки атрибута
-
+const task24Practicum = document.getElementById('practicum24');
 function makeTwentyFour() {
+	task24Practicum.setAttribute('value', 'Новое значение');
 	//Ваш код
 }
 
@@ -300,8 +306,12 @@ document.querySelector('.b-24').onclick = makeTwentyFour;
 //Задание 25
 //Используйте метод getElementById, чтобы найти элемент <div>. Добавьте атрибут "data-info" со значением "Дополнительная информация" к элементу <div>. Выведите значение атрибута на экран.
 //Подсказка: Используйте метод setAttribute для добавления атрибута
-
+const task25Practicum = document.getElementById('practicum25');
 function makeTwentyFive() {
+	task25Practicum.setAttribute('data-info', 'Дополнительная информация');
+	const task25NewAt = task25Practicum.getAttribute('data-info');
+	const infoOutput = document.getElementById('infoOutput');
+	infoOutput.textContent = `Добавленный атрибут: ${task25NewAt}`;
 	//1 шаг: Найдите элемент
 	//2 шаг: Добавьте элементу, найденному в первом шаге, атрибут: ('data-info', 'Дополнительная информация');
 	//3 шаг: Запишите значение атрибута в переменную
@@ -316,8 +326,8 @@ document.querySelector('.b-25').onclick = makeTwentyFive;
 //Подсказка: Используйте метод closest для поиска ближайшего родительского элемента
 
 const button = document.querySelector('.b-26');
-// const parent = Ваш код;
-
+// Ваш код;
+const parent = button.closest('.parent');
 const makeTwentySix = () => {
 	parent.style.backgroundColor = 'red';
 };
@@ -327,8 +337,10 @@ document.querySelector('.b-26').onclick = makeTwentySix;
 //Задание 27
 //Используйте метод `getElementById`, чтобы найти элемент `<div>`. Проверьте, содержит ли данный элемент класс `highlight`. Выедите результат в <div> c id result.
 //Подсказка: Используйте метод `contains` для проверки наличия класса у элемента. В <div> должен появиться результат true или false.
-
+const task27Practicum = document.getElementById('practicum27');
+const task27result = document.getElementById('result');
 function makeTwentySeven() {
+	task27result.textContent = task27Practicum.classList.contains('highlight');
 	//Найдите переменную
 	//Создайте переменную и сохраните в неё результат проверки метода contains. Например: const result = p.classList.contains('active');
 	//Найдите переменную, в которую нужно вывести результат
@@ -346,25 +358,26 @@ const buttonTaskTwentyEight = document.getElementById('button28');
 function handleClick() {
 	console.log('Кнопка нажата');
 }
+buttonTaskTwentyEight.addEventListener('click', handleClick);
 
 //Добавьте слушатель eventListener на кнопку buttonTaskTwentyEight
 
 //Задание 29
 //Используйте метод getElementById, чтобы найти элемент <input />. Добавьте обработчик события change, который будет выводить сообщение "Значение изменено" в консоль при изменении значения в поле ввода.
 //Подсказка: Используйте метод addEventListener для добавления обработчика события. Чтобы проверить работу слушателя, нужно напечатать один символ и более в поле ввода и убрать фокус с инпута, кликнув на любое место страницы.
-
+const task29Practicum = document.getElementById('input29');
 function handleChange() {
 	console.log('Значение изменено');
 }
-
+task29Practicum.addEventListener('change', handleChange);
 //Ваш код
 
 //Задание 30
 //Используйте метод getElementById, чтобы найти элемент <div>. Добавьте обработчик события `mouseover`, который будет выводить сообщение "Курсор наведен на элемент" в консоль при наведении курсора на элемент.
 //Подсказка: Используйте метод addEventListener для добавления обработчика события. Чтобы проверить работу слушателя, нужно напечатать один символ и более в поле ввода и убрать фокус с инпута, кликнув на любое место страницы.
-
+const task30Practicum = document.getElementById('div30');
 function handleMouseOver() {
 	console.log('Курсор наведен на элемент');
 }
-
+task30Practicum.addEventListener('mouseover', handleMouseOver);
 //Ваш код
