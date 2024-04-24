@@ -44,7 +44,7 @@ const taskInput = document.getElementById('taskInput');
 const addButton = document.getElementById('addButton');
 const taskList = document.getElementById('taskList');
 
-// Обработчик события клика на кнопку "Добавить"
+// Обработчик события клика на кнопку "Добавить" 
 addButton.addEventListener('click', function () {
 const newTask = document.createElement('li');
 newTask.textContent = taskInput.value;
