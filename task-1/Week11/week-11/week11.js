@@ -169,14 +169,14 @@ document.querySelector('.b-13').onclick = makeThirteen;
 //Метод forEach является методом массивов в JavaScript. Он выполняет указанную функцию один раз для каждого элемента в массиве. С этим методом мы познакомимся на следующей неделе.
 
 function makeFourteen() {
-	// const paragraphs = document.querySelectorAll('p');
+	const paragraphs = document.querySelectorAll('p');
 
 	//Найдите все элементы <p>
 	//const paragraphs = ваш код;
-	// paragraphs.forEach(function (paragraph) {
-	// 	paragraph.textContent = "Огого, что могу!";
+	paragraphs.forEach(function (paragraph) {
+		paragraph.textContent = "Огого, что могу!";
 		//Измените их текстовое содержимое у paragraph
-	// });
+	});
 }
 
 document.querySelector('.b-14').onclick = makeFourteen;
