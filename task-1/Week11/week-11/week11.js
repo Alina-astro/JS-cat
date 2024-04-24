@@ -186,9 +186,10 @@ document.querySelector('.b-14').onclick = makeFourteen;
 //Задание 15
 //Используйте метод getElementById, чтобы найти элемент <div>. При нажатии на кнопку удалите у него класс "practicum15".
 //Подсказка: Используйте метод remove для удаления класса элемента
-
+const task15Practicum = document.getElementById('practicum15');
 function makeFifteen() {
 	//Ваш код
+	task15Practicum.classList.remove('practicum15');
 }
 
 document.querySelector('.b-15').onclick = makeFifteen;
@@ -196,8 +197,9 @@ document.querySelector('.b-15').onclick = makeFifteen;
 //Задание 16
 //Используйте метод getElementById, чтобы найти элемент <div>. При нажатии на кнопку добавьте ему класс "practicum16".
 //Подсказка: Используйте метод add для добавления класса элемента
-
+const task16Practicum = document.getElementById('practicum16');
 function makeSixteen() {
+	task16Practicum.classList.add('practicum16');
 	//Ваш код
 }
 
@@ -206,8 +208,9 @@ document.querySelector('.b-16').onclick = makeSixteen;
 //Задание 17
 //Используйте метод getElementById, чтобы найти элемент <div>. При нажатии на кнопку переключите у него класс "color", который изменяет его фоновый цвет. Если класс уже присутствует, удалите его, иначе добавьте.
 //Подсказка: Используйте метод toggle класса элемента
-
+const task17Practicum = document.getElementById('practicum17');
 function makeSeventeen() {
+	task17Practicum.classList.toggle('color');
 	//Ваш код
 }
 
@@ -216,8 +219,9 @@ document.querySelector('.b-17').onclick = makeSeventeen;
 //Задание 18
 //Используйте метод getElementById, чтобы найти элемент <div>. При нажатии на кнопку добавьте ему класс "active", который изменит его стиль, например, изменит цвет текста. При повторном нажатии удалите класс "active".
 //Подсказка: Используйте метод toggle класса элемента
-
+const task18Practicum = document.getElementById('practicum18');
 function makeEighteen() {
+	task18Practicum.classList.toggle('active');
 	//Ваш код
 }
 
@@ -226,8 +230,9 @@ document.querySelector('.b-18').onclick = makeEighteen;
 //Задание 19
 //Используйте метод getElementById, чтобы найти элемент <div>. При нажатии на кнопку удалите у него класс "active", который изменяет его стиль, например, изменяет цвет текста.
 //Подсказка: Используйте метод remove класса элемента
-
+const task19Practicum = document.getElementById('practicum19');
 function makeNineteen() {
+	task19Practicum.classList.remove('active');
 	//Ваш код
 }
 
@@ -236,8 +241,11 @@ document.querySelector('.b-19').onclick = makeNineteen;
 //Задание 20
 //Используйте метод getElementById, чтобы найти элемент <div>. При нажатии на кнопку добавьте в начало элемента <div> новый дочерний элемент <p> с текстом "Добавлено в начало".
 //Подсказка: Используйте метод prepend для добавления нового дочернего элемента в начало элемента <div>
-
+const task20Practicum = document.getElementById('practicum20');
 function makeTwenty() {
+	const task20NewElement = document.createElement('p');
+	task20NewElement.innerHTML = 'Добавлено в начало';
+	task20Practicum.prepend(task20NewElement);
 	//Ваш код
 }
 
@@ -246,8 +254,11 @@ document.querySelector('.b-20').onclick = makeTwenty;
 //Задание 21
 //Используйте метод getElementById, чтобы найти элемент <div>. При нажатии на кнопку добавьте в конец элемента <div> новый дочерний элемент <p> с текстом "Добавлено в конец".
 //Подсказка: Используйте метод append для добавления нового дочернего элемента в конец элемента <div>
-
+const task21Practicum = document.getElementById('practicum21');
 function makeTwentyOne() {
+	const task21NewElement = document.createElement('p');
+	task21NewElement.innerHTML = 'Добавлено в конец';
+	task21Practicum.append(task21NewElement);
 	//Ваш код
 }
 
@@ -256,7 +267,7 @@ document.querySelector('.b-21').onclick = makeTwentyOne;
 //Задание 22
 //Используйте метод getElementById, чтобы найти элемент <img>. Выведите информацию на экран о наличии атрибута "src" у изображения.
 //Подсказка: Используйте метод hasAttribute для проверки наличия атрибута
-
+const task22Practicum = document.getElementById('practicum22');
 function makeTwentyTwo() {
 	//1 шаг: Найдите элемент
 	//2 шаг: Создайте переменную, которая проверяет наличие атрибута у найденного элемента
