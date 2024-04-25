@@ -69,6 +69,43 @@ body {
           }
         }
       }
+      .total {
+        margin: 30px 0px;
+        height: 10vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: rgb(58, 58, 58);
+        // box-shadow: 0px 0px 5px 8px rgba(202, 202, 202, 0.2);
+        .total__button {
+          button {
+            width: 18vw;
+            height: 50px;
+            background-color: rgba(240, 255, 188, 0.825);
+            border: 2px solid rgba(202, 202, 202, 0.2);
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(200, 168, 138, 0.888);
+            color: rgb(99, 99, 99);
+          }
+          button:active {
+            box-shadow: 0px 0px 0px 0px rgb(255, 255, 255);
+            border: 2px solid rgba(221, 200, 182, 0.888);
+          }
+        }
+        .total__cost {
+          font-size: 18px;
+          #totalValue {
+            font-weight: bolder;
+          }
+        }
+      }
     }
+  }
+  .footer {
+    margin: 20px;
+    text-align: right;
+    font-size: 14px;
+    line-height: 150%;
+    color: gray;
   }
 }
