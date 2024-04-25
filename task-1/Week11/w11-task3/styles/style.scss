@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(../assets/fonts/Roboto.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  max-width: 1920px;
+  min-width: 280px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Roboto", Tahoma, sans-serif;
+  background-color: antiquewhite;
+  .header {
+    .welcome-img {
+      img {
+        width: 100%;
+      }
+    }
+    h1 {
+      text-align: center;
+      letter-spacing: 3px;
+      color: rgb(58, 58, 58);
+    }
+  }
+  .main {
+    padding: 20px 25vw;
+    .basket-wrap {
+      .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        .menu__card {
+          display: flex;
+          gap: 20px;
+          color: rgb(58, 58, 58);
+          box-shadow: 0px 0px 5px 8px rgba(202, 202, 202, 0.2);
+          .menu__img {
+            flex-basis: 30%;
+            img {
+              width: 100%;
+            }
+          }
+          .menu__text {
+            flex-basis: 50%;
+            flex-grow: 1;
+            .menu__title {
+              font-size: 18px;
+              letter-spacing: 1px;
+              font-weight: bolder;
+              margin: 10px 0px;
+            }
+            .menu__desc {
+              font-size: 14px;
+              color: gray;
+            }
+          }
+          .menu__qt {
+            flex-basis: 8%;
+            align-self: center;
+          }
+          .menu__cost {
+            flex-basis: 10%;
+            align-self: center;
+            font-weight: bolder;
+          }
+        }
+      }
+    }
+  }
+}
