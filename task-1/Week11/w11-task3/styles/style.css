@@ -94,6 +94,10 @@ body .main .basket-wrap .total .total__cost {
 body .main .basket-wrap .total .total__cost #totalValue {
   font-weight: bolder;
 }
+body .main .basket-wrap .total .total__cost #discValue {
+  font-weight: bolder;
+  margin-top: 10px;
+}
 body .footer {
   margin: 20px;
   text-align: right;
