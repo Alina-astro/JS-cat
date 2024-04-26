@@ -98,6 +98,22 @@ body .main .basket-wrap .total .total__cost #discValue {
   font-weight: bolder;
   margin-top: 10px;
 }
+body .main .basket-wrap .delivery-button {
+  text-align: right;
+}
+body .main .basket-wrap .delivery-button button {
+  width: 20vw;
+  height: 50px;
+  background-color: rgba(240, 255, 188, 0.825);
+  border: 2px solid rgba(240, 255, 188, 0.825);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(200, 168, 138, 0.888);
+  color: rgb(79, 79, 79);
+  text-transform: uppercase;
+}
+body .main .basket-wrap .delivery-button button:active {
+  border: 2px solid rgba(221, 200, 182, 0.888);
+}
 body .footer {
   margin: 20px;
   text-align: right;
