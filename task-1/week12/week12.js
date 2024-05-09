@@ -311,9 +311,11 @@ const resultTwenty = document.querySelector('#resultTwenty');
 
 const makeTwenty = () => {
 	//Ваш код
+	return resultTwenty.innerHTML = Math.max(10, 25, 5, 30, 15);
 };
 
 //Добавьте слушатель события
+buttonTwenty.addEventListener('click', makeTwenty);
 
 // Задание 21
 // Выведите на экран случайное целое число от 1 до 10. Добавьте слушатель события на кнопку "Задание 21" и выведите результат на экран.
@@ -323,9 +325,11 @@ const resultTwentyOne = document.querySelector('#resultTwentyOne');
 
 const makeTwentyOne = () => {
 	//Ваш код
+	return resultTwentyOne.innerHTML = Math.floor(Math.random()*10);
 };
 
 //Добавьте слушатель события
+buttonTwentyOne.addEventListener('click', makeTwentyOne);
 
 //Задание 22
 //Найдите минимальное число из чисел 10, 25, 5, 30, 15. Добавьте слушатель события на кнопку "Задание 21" и выведите результат на экран.
@@ -336,9 +340,11 @@ const resultTwentyTwo = document.querySelector('#resultTwentyTwo');
 
 const makeTwentyTwo = () => {
 	//Ваш код
+	return resultTwentyTwo.innerHTML = Math.min(10, 25, 5, 30, 15);
 };
 
 //Добавьте слушатель события
+buttonTwentyTwo.addEventListener('click', makeTwentyTwo);
 
 //Задание 23
 //Выведите на экран результат возведения числа 2 в степень 5. Добавьте слушатель события на кнопку "Задание 23" и выведите результат на экран.
@@ -349,9 +355,11 @@ const resultTwentyThree = document.querySelector('#resultTwentyThree');
 
 const makeTwentyThree = () => {
 	//Ваш код
+	return resultTwentyThree.innerHTML = Math.pow(2, 5);
 };
 
 //Добавьте слушатель события
+buttonTwentyThree.addEventListener('click', makeTwentyThree);
 
 //Задание 24
 //Выведите на экран наименьшее число из чисел 7, 3, 11, 5, 9. Добавьте слушатель события на кнопку "Задание 24" и выведите результат на экран.
@@ -361,9 +369,11 @@ const resultTwentyFour = document.querySelector('#resultTwentyFour');
 
 const makeTwentyFour = () => {
 	//Ваш код
+	return resultTwentyFour.innerHTML = Math.min(7, 3, 11, 5, 9);
 };
 
 //Добавьте слушатель события
+buttonTwentyFour.addEventListener('click', makeTwentyFour);
 
 //Задание 25
 //Выведите на экран наибольшее число из чисел 7, 3, 11, 5, 9. Добавьте слушатель события на кнопку "Задание 25" и выведите результат на экран.
@@ -373,9 +383,11 @@ const resultTwentyFive = document.querySelector('#resultTwentyFive');
 
 const makeTwentyFive = () => {
 	//Ваш код
+	return resultTwentyFive.innerHTML = Math.max(7, 3, 11, 5, 9);
 };
 
 //Добавьте слушатель события
+buttonTwentyFive.addEventListener('click', makeTwentyFive);
 
 //Задание 26
 //Выведите на экран случайное число от 0 до 1 с точностью до 4 знаков после запятой. Добавьте слушатель события на кнопку "Задание 26" и выведите результат на экран.
@@ -386,9 +398,12 @@ const resultTwentySix = document.querySelector('#resultTwentySix');
 
 const makeTwentySix = () => {
 	//Ваш код
+	const num26 = Math.random();
+	return resultTwentySix.innerHTML = num26.toFixed(4);
 };
 
 //Добавьте слушатель события
+buttonTwentySix.addEventListener('click', makeTwentySix);
 
 //Задание 27
 //Выведите на экран случайное целое число от 50 до 100. Добавьте слушатель события на кнопку "Задание 27" и выведите результат на экран.
@@ -398,9 +413,11 @@ const resultTwentySeven = document.querySelector('#resultTwentySeven');
 
 const makeTwentySeven = () => {
 	//Ваш код
+	
 };
 
 //Добавьте слушатель события
+buttonTwentySeven.addEventListener('click', makeTwentySeven);
 
 //Задание 28
 //Округлите число 4.47 в большую сторону с помощью метода Math.ceil(). Добавьте слушатель события на кнопку "Задание 28" и выведите результат на экран.
