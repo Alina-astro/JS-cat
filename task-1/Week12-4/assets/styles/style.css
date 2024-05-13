@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 20px 8vw;
+  font-family: "Courier New", Courier, monospace;
+  background-color: darkslategray;
+  color: aquamarine;
+}
+body header h1 {
+  font-size: 40px;
+}
+body main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+}
+body main .add-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+body main .chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}/*# sourceMappingURL=style.css.map */
