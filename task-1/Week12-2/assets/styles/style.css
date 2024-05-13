@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "Font-Title";
+  src: url(../fonts/RuslanDisplay-Regular.ttf);
+}
+@font-face {
+  font-family: "Font-Text";
+  src: url(../fonts/Kurale-Regular.ttf);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 20px 10vw;
+  background-color: rgb(22, 35, 52);
+  color: rgb(249, 243, 202);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+body header {
+  text-align: center;
+}
+body header .img {
+  width: 100px;
+  margin: 0 auto;
+}
+body header .img img {
+  width: 100%;
+  border-radius: 10px;
+}
+body header h1 {
+  font-family: "Font-Title";
+}
+body main {
+  padding: 10px 15vw;
+  text-align: center;
+  font-family: "Font-Text";
+  line-height: 140%;
+}
+body main h2 {
+  margin: 20px 0;
+}
+body main .img-cat img {
+  width: 60%;
+  border-radius: 20px;
+  margin: 20px auto;
+}/*# sourceMappingURL=style.css.map */

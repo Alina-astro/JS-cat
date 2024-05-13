@@ -413,7 +413,8 @@ const resultTwentySeven = document.querySelector('#resultTwentySeven');
 
 const makeTwentySeven = () => {
 	//Ваш код
-	
+	const randomNumber = Math.floor(Math.random() * (101 - 50) + 50);
+	return resultTwentySeven.innerHTML = randomNumber;
 };
 
 //Добавьте слушатель события
@@ -427,9 +428,11 @@ const resultTwentyEight = document.querySelector('#resultTwentyEight');
 
 const makeTwentyEight = () => {
 	//Ваш код
+	return resultTwentyEight.innerHTML = Math.ceil(4.47);
 };
 
 //Добавьте слушатель события
+buttonTwentyEight.addEventListener('click', makeTwentyEight);
 
 //Задание 29
 //Получите квадратный корень из числа 16 с помощью метода Math.sqrt(). Добавьте слушатель события на кнопку "Задание 29" и выведите результат на экран.
@@ -439,9 +442,11 @@ const resultTwentyNine = document.querySelector('#resultTwentyNine');
 
 const makeTwentyNine = () => {
 	//Ваш код
+	return resultTwentyNine.innerHTML = Math.sqrt(16);
 };
 
 //Добавьте слушатель события
+buttonTwentyNine.addEventListener('click', makeTwentyNine);
 
 //Задание 30
 //Получите квадратный корень из числа 25 с помощью метода Math.sqrt(). Добавьте слушатель события на кнопку "Задание 30" и выведите результат на экран.
@@ -451,6 +456,8 @@ const resultThirty = document.querySelector('#resultThirty');
 
 const makeThirty = () => {
 	//Ваш код
+	return resultThirty.innerHTML = Math.sqrt(25);
 };
 
 //Добавьте слушатель события
+buttonThirty.addEventListener('click', makeThirty);
