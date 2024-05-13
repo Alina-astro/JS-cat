@@ -15,7 +15,10 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 50px;
-    .result {
+    .wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       border: 1px dashed rgb(184, 254, 230);
       border-radius: 20px;
       width: 300px;
