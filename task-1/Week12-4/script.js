@@ -3,10 +3,12 @@ const newUserAvatar = document.getElementById('new-avatar');
 const newUserComment = document.getElementById('new-comment');
 const button = document.getElementById('button');
 const chat = document.querySelector('.chat');
+
 button.addEventListener('click', function() {
     const newBlockComment = document.createElement('div');  // создаём блок комментария 
     newBlockComment.classList.add('user-comment');   // ------ присваиваем стили по классу 
     chat.append(newBlockComment); // ------------------------- добавляем в блок Чат после заголовка (в конец элемента)
+    
     const userImage = document.createElement('div'); // ------ в блоке комментария создаём div для аватара и повторяем действия с классами
     userImage.classList.add('user-comment__image');
     newBlockComment.prepend(userImage);
@@ -14,6 +16,7 @@ button.addEventListener('click', function() {
     userAvatar.style.width = '100%';
     userAvatar.src = newUserAvatar.value; // ----------------- адрес аватара
     userImage.prepend(userAvatar);
+    
     const userName = document.createElement('div'); // ------- создаём блок div для имени и добавляем стили
     userName.classList.add('user-comment__name');
     const name = newUserName.value;  // ---------------------- берём содержимое с именем
@@ -23,6 +26,7 @@ button.addEventListener('click', function() {
     const firstUpCase = nameWithoutSpaces[0].toUpperCase(); // делаем первую букву заглавной
     userName.textContent = firstUpCase+nameWithoutFirst; // -- склеиваем первую букву и отрезанное слово - добавляем в содержание блока имени
     newBlockComment.append(userName); // --------------------- добавляем блок с именем
+    
     const userComment = document.createElement('div'); // ---- создаём блок div для комментария
     const comment = newUserComment.value;
     function checkSpam(comment) {   // ----------------------- создаём функцию для проверки на спам
@@ -32,6 +36,7 @@ button.addEventListener('click', function() {
     }
     userComment.textContent = checkSpam(comment); // --------- добавляем содержимое комментария
     newBlockComment.append(userComment); // ------------------ добавляем блок div для комментария
+    
     newUserName.value = ''; // ------------------------------- стираем содержимое ячеек
     newUserAvatar.value = '';
     newUserComment.value = '';

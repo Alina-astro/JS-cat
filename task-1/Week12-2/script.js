@@ -17,7 +17,7 @@ const index = result.search('моря');
 console.log(`8. Индекс первого вхождения "моря": ${index}`);
 const modifiedText = replacedText.replace(replacedText[0], replacedText[0].toUpperCase());
 console.log(`9. Строка с измененной первой буквой: ${modifiedText}`);
-function toChangeAllText() {
+function changeAllText() {
     const change1 = text.replace(/;/g, ';\n'); // -------------------------------------------перенос строк не работает
     const change2 = change1.replace(/клён/g, 'дуб');
     const change3 = change2.replace(change2[0], change2[0].toUpperCase());

@@ -125,7 +125,7 @@ const resultEight = document.querySelector('#resultEight');
 const makeEight = () => {
 	const num1 = 123;
 	//Ваш код
-	const dividing = num1 / 10;
+	const dividing = num1 % 10;
 	return resultEight.innerHTML = dividing;
 };
 
