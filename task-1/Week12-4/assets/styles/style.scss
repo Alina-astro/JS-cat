@@ -11,24 +11,90 @@ body {
   header {
     h1 {
       font-size: 40px;
+      letter-spacing: 3px;
+      color: darkcyan;
+      text-shadow: 1px 1px 2px aquamarine;
     }
   }
   main {
+    margin-top: 50px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 50px;
     .add-text {
+      //   border: 1px solid pink;
+      width: 35vw;
+      height: 70vh;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
+      h2 {
+        color: darkcyan;
+        font-size: 30px;
+      }
+      .box {
+        label {
+          font-size: 20px;
+          margin-left: 10px;
+        }
+        input {
+          margin-top: 10px;
+          width: 25vw;
+          height: 36px;
+          background-color: darkslategray;
+          color: white;
+          border: 2px dotted white;
+          border-radius: 6px;
+        }
+        textarea {
+          margin-top: 10px;
+          background-color: darkslategray;
+          color: white;
+          border: 2px dotted white;
+          border-radius: 10px;
+        }
+        #button {
+          background-color: darkslategray;
+          color: aquamarine;
+          font-size: 20px;
+          border-radius: 10px;
+          width: 200px;
+          height: 50px;
+        }
+      }
     }
     .chat {
+      //   border: 1px solid pink;
+      width: 45vw;
+      height: 70vh;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: flex-start;
+      h2 {
+        color: darkcyan;
+        font-size: 30px;
+      }
+      .user-comment {
+        margin-top: 10px;
+        padding: 10px;
+        width: 100%;
+        color: aquamarine;
+        border: 2px dotted white;
+        border-radius: 10px;
+        .user-comment__image {
+          width: 100px;
+          img {
+            width: 100%;
+          }
+        }
+        .user-comment__name {
+          font-size: 20px;
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
+      }
     }
   }
 }

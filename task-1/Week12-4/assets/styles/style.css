@@ -12,22 +12,84 @@ body {
 }
 body header h1 {
   font-size: 40px;
+  letter-spacing: 3px;
+  color: darkcyan;
+  text-shadow: 1px 1px 2px aquamarine;
 }
 body main {
+  margin-top: 50px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 50px;
 }
 body main .add-text {
+  width: 35vw;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+}
+body main .add-text h2 {
+  color: darkcyan;
+  font-size: 30px;
+}
+body main .add-text .box label {
+  font-size: 20px;
+  margin-left: 10px;
+}
+body main .add-text .box input {
+  margin-top: 10px;
+  width: 25vw;
+  height: 36px;
+  background-color: darkslategray;
+  color: white;
+  border: 2px dotted white;
+  border-radius: 6px;
+}
+body main .add-text .box textarea {
+  margin-top: 10px;
+  background-color: darkslategray;
+  color: white;
+  border: 2px dotted white;
+  border-radius: 10px;
+}
+body main .add-text .box #button {
+  background-color: darkslategray;
+  color: aquamarine;
+  font-size: 20px;
+  border-radius: 10px;
+  width: 200px;
+  height: 50px;
 }
 body main .chat {
+  width: 45vw;
+  height: 70vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
+}
+body main .chat h2 {
+  color: darkcyan;
+  font-size: 30px;
+}
+body main .chat .user-comment {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  color: aquamarine;
+  border: 2px dotted white;
+  border-radius: 10px;
+}
+body main .chat .user-comment .user-comment__image {
+  width: 100px;
+}
+body main .chat .user-comment .user-comment__image img {
+  width: 100%;
+}
+body main .chat .user-comment .user-comment__name {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
 }/*# sourceMappingURL=style.css.map */
