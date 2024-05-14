@@ -1,0 +1,27 @@
+const newUserName = document.getElementById('new-username');
+const newUserAvatar = document.getElementById('new-avatar');
+const newUserComment = document.getElementById('new-comment');
+const button = document.getElementById('button');
+const chat = document.querySelector('.chat');
+button.addEventListener('click', function() {
+    const newBlockComment = document.createElement('div');
+    newBlockComment.classList.add('user-comment');
+    chat.append(newBlockComment);
+    const userImage = document.createElement('div');
+    userImage.classList.add('user-comment__image');
+    newBlockComment.prepend(userImage);
+    const userAvatar = document.createElement('img');
+    userAvatar.style.width = '100%';
+    userAvatar.src = newUserAvatar.value;
+    userImage.prepend(userAvatar);
+    const userName = document.createElement('div');
+    userName.classList.add('user-comment__name');
+    userName.textContent = newUserName.value;
+    newBlockComment.append(userName);
+    const userComment = document.createElement('div');
+    userComment.textContent = newUserComment.value;
+    newBlockComment.append(userComment);
+    newUserName.value = '';
+    newUserAvatar.value = '';
+    newUserComment.value = '';
+});
