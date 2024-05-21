@@ -135,6 +135,7 @@ body main .box-input div input {
   border: 2px solid rgba(68, 65, 66, 0.603);
   height: 30px;
   width: 300px;
+  padding-left: 10px;
 }
 body main .box-input div ul {
   min-width: 200px;
