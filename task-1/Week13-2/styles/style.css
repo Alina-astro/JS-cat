@@ -27,8 +27,8 @@ body main .box input {
   font-family: "Courier New", Courier, monospace;
 }
 body main .btn button {
-  width: 200px;
-  height: 40px;
+  width: 180px;
+  height: 38px;
   background-color: pink;
   border-radius: 10px;
   border: 2px solid rgb(150, 103, 150);
