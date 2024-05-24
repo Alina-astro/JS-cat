@@ -29,10 +29,17 @@ body main .add-text {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 20px;
 }
 body main .add-text h2 {
   color: darkcyan;
   font-size: 30px;
+}
+body main .add-text .check {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-left: 20px;
 }
 body main .add-text .box label {
   font-size: 20px;
@@ -67,16 +74,18 @@ body main .add-text .box #button {
 body main .chat {
   width: 45vw;
   height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
 }
 body main .chat h2 {
   color: darkcyan;
   font-size: 30px;
 }
-body main .chat .user-comment {
+body main .chat .chat__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+body main .chat .chat__box .user-comment {
   margin-top: 10px;
   padding: 10px;
   width: 100%;
@@ -84,14 +93,35 @@ body main .chat .user-comment {
   border: 2px dotted white;
   border-radius: 10px;
 }
-body main .chat .user-comment .user-comment__image {
+body main .chat .chat__box .user-comment .user-wrap {
+  border: 1px solid violet;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+}
+body main .chat .chat__box .user-comment .user-wrap .user-comment__image {
+  flex-basis: 100px;
   width: 100px;
+  border: 1px solid violet;
 }
-body main .chat .user-comment .user-comment__image img {
+body main .chat .chat__box .user-comment .user-wrap .user-comment__image img {
   width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-body main .chat .user-comment .user-comment__name {
+body main .chat .chat__box .user-comment .user-wrap .user-comment__name {
+  border: 1px solid white;
+  flex-grow: 1;
+  text-align: left;
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 10px;
+}
+body main .chat .chat__box .user-comment .user-wrap .user-comment__data {
+  border: 1px solid lime;
+  flex-basis: 25%;
+  text-align: end;
+  font-size: 15px;
 }/*# sourceMappingURL=style.css.map */

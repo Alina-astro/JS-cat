@@ -18,6 +18,18 @@
     <main>
         <div class="add-text">
             <h2>Оставьте Ваш комментарий</h2>
+            <div class="check">
+                <div class="check__title">Показывать ваше имя?</div>
+                <div>
+                    <input type="radio" id="agreement" name="check" value="agreement" checked />
+                    <label for="agreement">Да</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="disagreement" name="check" value="disagreement" />
+                    <label for="disagreement">Нет</label>
+                </div>
+            </div>
             <div class="box">
                 <label for="username">Имя</label></br>
                 <input type="text" id="new-username" placeholder="Введите ваше имя">
@@ -37,13 +49,22 @@
         </div>
         <div class="chat">
             <h2>Чат</h2>
-            <!-- <div class="user-comment">
-                <div class="user-comment__image">
-                    <img src="" alt="avatar">
-                </div>
-                <div class="user-comment__name"></div>
-                <div class="user-comment__text"></div>
-            </div> -->
+            <div class="chat__box">
+                <!-- <div class="user-comment">
+                    <div class="user-wrap">
+                        <div class="user-comment__image">
+                            <img src="https://wiki.mininuniver.ru/images/a/a4/%D0%9C%D0%B8%D0%BB%D1%8B%D0%B9_%D0%BA%D0%BE%D1%82%D0%B8%D0%BA.jpg"
+                                alt="avatar">
+                        </div>
+                        <div class="user-comment__name">Anny</div>
+                        <div class="user-comment__data">May, 22, 2024</div>
+                    </div>
+                    <div class="user-comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Praesentium commodi sit minima maxime quos assumenda quaerat rem magnam doloremque, quisquam
+                        inventore mollitia! Ad eaque in iure perspiciatis veniam itaque excepturi.
+                    </div>
+                </div> -->
+            </div>
         </div>
     </main>
     <footer></footer>
