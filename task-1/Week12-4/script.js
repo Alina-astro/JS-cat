@@ -19,7 +19,20 @@ button.addEventListener('click', function() {
     newBlockWrap.prepend(userImage); // ---------------------- добавляем в начало блока user-wrap
     const userAvatar = document.createElement('img');  // ---- создаём тег img, добавляем стили и 
     userAvatar.style.width = '100%';
+    if (newUserAvatar.value === '') {
+        const av1 = './assets/images/cat-01.jpg';
+        const av2 = './assets/images/cat-02.jpg';
+        const av3 = './assets/images/cat-03.jpg';
+        const av4 = './assets/images/cat-04.jpg';
+        const av5 = './assets/images/cat-05.jpg';
+        const av6 = './assets/images/cat-06.jpg';
+        const avatar = [av1, av2, av3, av4, av5, av6];
+        const randomIndexAvatar = Math.floor(Math.random() * 6);
+        userAvatar.src = avatar[randomIndexAvatar];
+    } else {
     userAvatar.src = newUserAvatar.value; // ----------------- адрес аватара
+    }
+
     userImage.prepend(userAvatar); // ------------------------ добавляем в начало блока для аватара
     
     const userName = document.createElement('div'); // ------- создаём блок div для имени и добавляем стили
@@ -30,7 +43,7 @@ button.addEventListener('click', function() {
     userName.textContent = nameTrim[0].toUpperCase()+nameTrim.slice(1).toLowerCase(); 
     //добавляем в содержание блока имени: склеенные первую заглавную букву и отрезанные оставшиеся строчные 
     } else {  // --------------------------------------------- добавляем условие обработки выбранной кнопки "Нет"
-    userName.textContent = 'User';
+    userName.textContent = 'Username';
     }
     newBlockWrap.append(userName); // ------------------------ добавляем блок с именем в конец блока user-wrap
 

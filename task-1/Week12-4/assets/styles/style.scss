@@ -93,7 +93,6 @@ body {
           border: 2px dotted white;
           border-radius: 10px;
           .user-wrap {
-            border: 1px solid violet;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -102,7 +101,6 @@ body {
             .user-comment__image {
               flex-basis: 100px;
               width: 100px;
-              border: 1px solid violet;
               img {
                 width: 100%;
                 aspect-ratio: 1/1;
@@ -110,14 +108,12 @@ body {
               }
             }
             .user-comment__name {
-              border: 1px solid white;
               flex-grow: 1;
               text-align: left;
               font-size: 20px;
               font-weight: 600;
             }
             .user-comment__data {
-              border: 1px solid lime;
               flex-basis: 25%;
               text-align: end;
               font-size: 15px;
