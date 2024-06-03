@@ -31,7 +31,6 @@ ${studentsGrades[11].id} .............. ${studentsGrades[11].grade}</br>`;
 const grades = studentsGrades.map((student) => {              // -------- формируем отдельный массив из оценок
     return student.grade;
 });
-console.log(grades);
 
 const total = grades.reduce((sum, current) => sum + current);  // ------ суммируем все числа массива
 const mediumTotal = Math.floor(total/grades.length);           // ------ рассчитываем среднее значение
@@ -60,4 +59,34 @@ resultsGood.innerHTML = `Количество студентов, получив
 const resultsBad = document.querySelector('.results__bad');
 resultsBad.textContent = `Количество студентов, получивших отрицательную оценку: ${grades.length - filtredGrades.length}.`;
 
+studentsGrades.forEach(function(student) {      // --------------------- условия для преобразования числовых оценок в буквенные
+    if (student.grade >= 80) {
+        student.grade = 'A';
+    } else if (student.grade >= 60 && student.grade < 80) {
+        student.grade = 'B';
+    } else if (student.grade >= 40 && student.grade < 60) {
+        student.grade = 'C';
+    } else if (student.grade >= 20 && student.grade < 20) {
+        student.grade = 'D';
+    } else {
+        student.grade = 'E';
+    }
+});
+
 const gradesLetters = document.querySelector('.grades__letters');
+gradesLetters.innerHTML = 
+`${studentsGrades[0].id} .............. ${studentsGrades[0].grade}</br>
+${studentsGrades[1].id} .............. ${studentsGrades[1].grade}</br>
+${studentsGrades[2].id} .............. ${studentsGrades[2].grade}</br>
+${studentsGrades[3].id} .............. ${studentsGrades[3].grade}</br>
+${studentsGrades[4].id} .............. ${studentsGrades[4].grade}</br>
+${studentsGrades[5].id} .............. ${studentsGrades[5].grade}</br>
+${studentsGrades[6].id} .............. ${studentsGrades[6].grade}</br>
+${studentsGrades[7].id} .............. ${studentsGrades[7].grade}</br>
+${studentsGrades[8].id} .............. ${studentsGrades[8].grade}</br>
+${studentsGrades[9].id} .............. ${studentsGrades[9].grade}</br>
+${studentsGrades[10].id} .............. ${studentsGrades[10].grade}</br>
+${studentsGrades[11].id} .............. ${studentsGrades[11].grade}</br>`;
+
+
+
