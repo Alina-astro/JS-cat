@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 20px 8vw;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(70, 0, 70);
+  color: aliceblue;
+  header {
+    padding: 16px;
+    box-shadow: 0px 0px 17px 11px rgba(124, 129, 54, 0.567);
+    border-radius: 20px;
+    h1 {
+      font-size: 40px;
+      letter-spacing: 3px;
+      color: rgb(218, 215, 32);
+      text-shadow: 1px 1px 2px rgb(25, 139, 2);
+      text-align: center;
+    }
+  }
+  main {
+    .wrap {
+      margin-top: 30px;
+      padding: 10px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+      .card {
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+        border: 1px dashed rgba(163, 154, 54, 0.687);
+        border-radius: 10px;
+        .name {
+          font-size: 20px;
+        }
+        .about {
+          display: flex;
+          justify-content: space-between;
+          .profession {
+            font-weight: 100;
+            color: rgba(240, 248, 255, 0.7);
+          }
+          .all-films {
+            color: rgba(240, 248, 255, 0.7);
+          }
+          .all-films:active {
+            color: rgba(145, 204, 255, 0.7);
+          }
+        }
+      }
+    }
+    .best-wrap {
+      margin: 30px 100px;
+      padding: 20px;
+      box-shadow: 0px 0px 17px 11px rgba(124, 129, 54, 0.427);
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      h2 {
+        letter-spacing: 2px;
+      }
+    }
+  }
+}
