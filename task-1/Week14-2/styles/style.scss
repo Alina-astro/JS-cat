@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(../assets/fonts/Roboto.ttf);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 20px 8vw;
+  font-family: "Roboto";
+  background-color: rgb(00, 33, 70);
+  color: aliceblue;
+  header {
+    padding: 30px;
+    h1 {
+      font-size: 40px;
+      letter-spacing: 3px;
+      color: aliceblue;
+      text-shadow: 1px 1px 2px rgb(203, 214, 238);
+      text-align: center;
+    }
+  }
+  main {
+    display: flex;
+    justify-content: space-between;
+    .students {
+      width: 200px;
+      border: 1px solid aliceblue;
+      padding: 20px;
+      .students__list {
+        text-align: justify;
+      }
+    }
+    .results {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid aliceblue;
+      padding: 20px;
+    }
+
+    .students-grades {
+      width: 200px;
+      border: 1px solid aliceblue;
+      padding: 20px;
+    }
+  }
+}
