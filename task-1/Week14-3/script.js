@@ -3,7 +3,7 @@ const array = [
       name: 'Стивен Спилберг',
       career: 'Продюсер, Режиссёр, Сценарист, Актёр, Монтажёр',
       films: 'https://www.film.ru/person/stiven-spilberg',
-      top_rated_film: 'Список Шиндлера'
+      top_rated_film: 'Назад в будущее'
     },
     {
       name: 'Кристофер Нолан',
@@ -54,3 +54,10 @@ const array = [
         top_rated_film: 'Волк с Уолл-стрит'
       },
   ];
+
+  
+
+    const prodName = document.querySelectorAll('.name').forEach((elem, index) => elem.textContent = array[index].name);
+    const prodCareer = document.querySelectorAll('.career').forEach((elem, index) => elem.textContent = array[index].career);
+    const prodFilms = document.querySelectorAll('.films').forEach((elem, index) => elem.href = array[index].films);
+    const bestFilm = document.querySelectorAll('.best__film').forEach((elem, index) => elem.textContent = array[index].top_rated_film);

@@ -46,17 +46,17 @@ body main .wrap .card .about {
   display: flex;
   justify-content: space-between;
 }
-body main .wrap .card .about .profession {
+body main .wrap .card .about .career {
   font-weight: 100;
   color: rgba(240, 248, 255, 0.7);
 }
-body main .wrap .card .about .all-films {
+body main .wrap .card .about .films {
   color: rgba(240, 248, 255, 0.7);
 }
-body main .wrap .card .about .all-films:active {
+body main .wrap .card .about .films:active {
   color: rgba(145, 204, 255, 0.7);
 }
-body main .best-wrap {
+body main .best {
   margin: 30px 100px;
   padding: 20px;
   box-shadow: 0px 0px 17px 11px rgba(124, 129, 54, 0.427);
@@ -67,6 +67,6 @@ body main .best-wrap {
   align-items: center;
   gap: 15px;
 }
-body main .best-wrap h2 {
+body main .best h2 {
   letter-spacing: 2px;
 }/*# sourceMappingURL=style.css.map */
