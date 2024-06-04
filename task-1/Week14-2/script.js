@@ -1,32 +1,24 @@
 const studentsGrades = [
-    {id: 'James', grade: Math.floor(Math.random() * 100)},
-    {id: 'Sophia', grade: Math.floor(Math.random() * 100)},
-    {id: 'Olivia', grade: Math.floor(Math.random() * 100)},
-    {id: 'Henry', grade: Math.floor(Math.random() * 100)},
-    {id: 'Daniel', grade: Math.floor(Math.random() * 100)},
-    {id: 'Emma', grade: Math.floor(Math.random() * 100)},
-    {id: 'Oliver', grade: Math.floor(Math.random() * 100)},
-    {id: 'Sebastian', grade: Math.floor(Math.random() * 100)},
-    {id: 'Amelia', grade: Math.floor(Math.random() * 100)},
-    {id: 'Leo', grade: Math.floor(Math.random() * 100)},
-    {id: 'John', grade: Math.floor(Math.random() * 100)},
-    {id: 'Penelope', grade: Math.floor(Math.random() * 100)}
+    {name: 'James', grade: Math.floor(Math.random() * 100)},
+    {name: 'Sophia', grade: Math.floor(Math.random() * 100)},
+    {name: 'Olivia', grade: Math.floor(Math.random() * 100)},
+    {name: 'Henry', grade: Math.floor(Math.random() * 100)},
+    {name: 'Daniel', grade: Math.floor(Math.random() * 100)},
+    {name: 'Emma', grade: Math.floor(Math.random() * 100)},
+    {name: 'Oliver', grade: Math.floor(Math.random() * 100)},
+    {name: 'Amelia', grade: Math.floor(Math.random() * 100)},
+    {name: 'Leo', grade: Math.floor(Math.random() * 100)},
+    {name: 'John', grade: Math.floor(Math.random() * 100)},
+    {name: 'Sebastian', grade: Math.floor(Math.random() * 100)},
+    {name: 'Penelope', grade: Math.floor(Math.random() * 100)}
 ];
 
-const studentsList = document.querySelector('.students__list');
-studentsList.innerHTML = 
-`${studentsGrades[0].id} .............. ${studentsGrades[0].grade}</br>
-${studentsGrades[1].id} .............. ${studentsGrades[1].grade}</br>
-${studentsGrades[2].id} .............. ${studentsGrades[2].grade}</br>
-${studentsGrades[3].id} .............. ${studentsGrades[3].grade}</br>
-${studentsGrades[4].id} .............. ${studentsGrades[4].grade}</br>
-${studentsGrades[5].id} .............. ${studentsGrades[5].grade}</br>
-${studentsGrades[6].id} .............. ${studentsGrades[6].grade}</br>
-${studentsGrades[7].id} .............. ${studentsGrades[7].grade}</br>
-${studentsGrades[8].id} .............. ${studentsGrades[8].grade}</br>
-${studentsGrades[9].id} .............. ${studentsGrades[9].grade}</br>
-${studentsGrades[10].id} .............. ${studentsGrades[10].grade}</br>
-${studentsGrades[11].id} .............. ${studentsGrades[11].grade}</br>`;
+// --------------------------------------------------------------------- выводим на страницу значения массива
+
+const studentName = document.querySelectorAll('.name').forEach((elem, index) => elem.textContent = studentsGrades[index].name);
+const studentGrade = document.querySelectorAll('.grade').forEach((elem, index) => elem.textContent = studentsGrades[index].grade);
+
+
 
 const grades = studentsGrades.map((student) => {              // -------- формируем отдельный массив из оценок
     return student.grade;
@@ -73,20 +65,8 @@ studentsGrades.forEach(function(student) {      // --------------------- усл�
     }
 });
 
-const gradesLetters = document.querySelector('.grades__letters');
-gradesLetters.innerHTML = 
-`${studentsGrades[0].id} .............. ${studentsGrades[0].grade}</br>
-${studentsGrades[1].id} .............. ${studentsGrades[1].grade}</br>
-${studentsGrades[2].id} .............. ${studentsGrades[2].grade}</br>
-${studentsGrades[3].id} .............. ${studentsGrades[3].grade}</br>
-${studentsGrades[4].id} .............. ${studentsGrades[4].grade}</br>
-${studentsGrades[5].id} .............. ${studentsGrades[5].grade}</br>
-${studentsGrades[6].id} .............. ${studentsGrades[6].grade}</br>
-${studentsGrades[7].id} .............. ${studentsGrades[7].grade}</br>
-${studentsGrades[8].id} .............. ${studentsGrades[8].grade}</br>
-${studentsGrades[9].id} .............. ${studentsGrades[9].grade}</br>
-${studentsGrades[10].id} .............. ${studentsGrades[10].grade}</br>
-${studentsGrades[11].id} .............. ${studentsGrades[11].grade}</br>`;
+// --------------------------------------------------------------------- выводим на страницу новые значения
 
-
+const studentNameLetter = document.querySelectorAll('.student-name').forEach((elem, index) => elem.textContent = studentsGrades[index].name);
+const studentGradeLetter = document.querySelectorAll('.grade-letter').forEach((elem, index) => elem.textContent = studentsGrades[index].grade);
 

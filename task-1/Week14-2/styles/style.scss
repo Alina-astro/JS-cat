@@ -25,24 +25,25 @@ body {
   main {
     display: flex;
     justify-content: space-between;
-    .students {
-      width: 200px;
+    .students-wrap {
+      width: 300px;
       border: 1px solid aliceblue;
       padding: 20px;
-      .students__list {
-        text-align: justify;
+      .student-card {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin: 10px 0px;
+        .points {
+          flex-grow: 1;
+          border-bottom: 1px dashed aliceblue;
+        }
       }
     }
     .results {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      border: 1px solid aliceblue;
-      padding: 20px;
-    }
-
-    .students-grades {
-      width: 200px;
       border: 1px solid aliceblue;
       padding: 20px;
     }

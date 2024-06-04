@@ -28,23 +28,25 @@ body main {
   display: flex;
   justify-content: space-between;
 }
-body main .students {
-  width: 200px;
+body main .students-wrap {
+  width: 300px;
   border: 1px solid aliceblue;
   padding: 20px;
 }
-body main .students .students__list {
-  text-align: justify;
+body main .students-wrap .student-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 10px 0px;
+}
+body main .students-wrap .student-card .points {
+  flex-grow: 1;
+  border-bottom: 1px dashed aliceblue;
 }
 body main .results {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid aliceblue;
-  padding: 20px;
-}
-body main .students-grades {
-  width: 200px;
   border: 1px solid aliceblue;
   padding: 20px;
 }/*# sourceMappingURL=style.css.map */
