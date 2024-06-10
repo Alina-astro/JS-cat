@@ -1,16 +1,20 @@
+function random() {
+    return Math.floor(Math.random() * 100);
+}
+
 const studentsGrades = [
-    {name: 'James', grade: Math.floor(Math.random() * 100)},
-    {name: 'Sophia', grade: Math.floor(Math.random() * 100)},
-    {name: 'Olivia', grade: Math.floor(Math.random() * 100)},
-    {name: 'Henry', grade: Math.floor(Math.random() * 100)},
-    {name: 'Daniel', grade: Math.floor(Math.random() * 100)},
-    {name: 'Emma', grade: Math.floor(Math.random() * 100)},
-    {name: 'Oliver', grade: Math.floor(Math.random() * 100)},
-    {name: 'Amelia', grade: Math.floor(Math.random() * 100)},
-    {name: 'Leo', grade: Math.floor(Math.random() * 100)},
-    {name: 'John', grade: Math.floor(Math.random() * 100)},
-    {name: 'Sebastian', grade: Math.floor(Math.random() * 100)},
-    {name: 'Penelope', grade: Math.floor(Math.random() * 100)}
+    {name: 'James', grade: random()},
+    {name: 'Sophia', grade: random()},
+    {name: 'Olivia', grade: random()},
+    {name: 'Henry', grade: random()},
+    {name: 'Daniel', grade: random()},
+    {name: 'Emma', grade: random()},
+    {name: 'Oliver', grade: random()},
+    {name: 'Amelia', grade: random()},
+    {name: 'Leo', grade: random()},
+    {name: 'John', grade: random()},
+    {name: 'Sebastian', grade: random()},
+    {name: 'Penelope', grade: random()}
 ];
 
 // --------------------------------------------------------------------- выводим на страницу значения массива
@@ -20,19 +24,15 @@ const studentGrade = document.querySelectorAll('.grade').forEach((elem, index) =
 
 
 
-const grades = studentsGrades.map((student) => {              // -------- формируем отдельный массив из оценок
-    return student.grade;
-});
+const grades = studentsGrades.map((student) => student.grade);  // -------- формируем отдельный массив из оценок
 
-const total = grades.reduce((sum, current) => sum + current);  // ------ суммируем все числа массива
-const mediumTotal = Math.floor(total/grades.length);           // ------ рассчитываем среднее значение
+const total = grades.reduce((sum, current) => sum + current);  // --------- суммируем все числа массива
+const mediumTotal = Math.floor(total/grades.length);           // --------- рассчитываем среднее значение
 
 const resultsMedium = document.querySelector('.results__medium');
 resultsMedium.textContent = `Средний балл по результатам теста: ${mediumTotal}.`;
 
-const maxNums = grades.sort((a,b) => {     // -------------------------- сортируем баллы от высокого к низкому
-    return b-a;
-});
+const maxNums = grades.sort((a,b) => b-a);    // -------------------------- сортируем баллы от высокого к низкому
 
 const resultsMax = document.querySelector('.results__max');
 resultsMax.textContent = `Максимальный балл по результатам теста: ${maxNums[0]}.`;
@@ -40,9 +40,7 @@ resultsMax.textContent = `Максимальный балл по результ�
 const resultsMin = document.querySelector('.results__min');
 resultsMin.textContent = `Минимальный балл по результатам теста: ${maxNums[maxNums.length - 1]}.`;
 
-const filtredGrades = grades.filter((item) => {      // ---------------- создаём новый массив с высокими баллами (>=60)
-    return item >= 60;
-});
+const filtredGrades = grades.filter((item) => item >= 60); // ------------ создаём новый массив с высокими баллами (>=60)
 
 const resultsGood = document.querySelector('.results__good');
 resultsGood.innerHTML = `Количество студентов, получивших положительную оценку: ${filtredGrades.length}.</br>

@@ -23,3 +23,4 @@ button.onclick = function() {
         result.textContent = `До вашего дня рождения ${number} ${days}!`;
     }  
 };
+
