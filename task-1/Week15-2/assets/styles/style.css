@@ -1,0 +1,13 @@
+body {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle, rgba(248, 251, 63, 0.4472382703) 0%, rgba(252, 70, 179, 0.4724483543) 100%);
+  font-family: "Courier New", Courier, monospace;
+}
+body header div h1 {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 35px;
+  color: rgb(255, 106, 196);
+}/*# sourceMappingURL=style.css.map */
