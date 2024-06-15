@@ -84,31 +84,25 @@ body main .box-btn .maroon {
   color: pink;
 }
 body main .box-wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 30px;
+  margin: 80px auto;
+  text-align: center;
 }
-body main .box-wrap .box-gallery {
+body main .box-wrap .box__gallery {
   width: 600px;
   margin: 20px auto;
   text-align: center;
 }
-body main .box-wrap .box-gallery .box-gallery__img {
+body main .box-wrap .box__gallery .gallery-img {
   width: 100%;
-  display: none;
 }
-body main .box-wrap .box-gallery .box-gallery__img:first-child {
-  display: block;
-}
-body main .box-wrap .button {
+body main .box-wrap .box__button {
+  margin: 20px auto;
   width: 600px;
   display: flex;
   justify-content: space-between;
+  text-align: center;
 }
-body main .box-wrap .button button {
+body main .box-wrap .box__button button {
   width: 180px;
   height: 40px;
   border-radius: 10px;
