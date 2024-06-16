@@ -55,13 +55,6 @@ addButton.addEventListener("click", function () {
 // -------------------------Carousel Image--------------------------------------//
 const img = document.querySelector(".gallery-img");
 
-// const av1 = "./assets/images/cat-01.jpg";
-// const av2 = "./assets/images/cat-02.jpg";
-// const av3 = "./assets/images/cat-03.jpg";
-// const av4 = "./assets/images/cat-04.jpg";
-// const av5 = "./assets/images/cat-05.jpg";
-// const av6 = "./assets/images/cat-06.jpg";
-
 const arrCats = [
   "./assets/images/cat-01.jpg",
   "./assets/images/cat-02.jpg",
@@ -70,12 +63,22 @@ const arrCats = [
   "./assets/images/cat-05.jpg",
   "./assets/images/cat-06.jpg",
 ];
+
 let i = 0;
 function nextImage() {
-  i++;
   if (i < arrCats.length) {
-    img.src = arrCats[i];
+    i++;
   } else {
-    i = 2;
+    img.src = arrCats[arrCats.length - 1];
   }
+  img.src = arrCats[i];
+}
+
+function prevImage() {
+  if (i > 0) {
+    i--;
+  } else {
+    img.src = arrCats[0];
+  }
+  img.src = arrCats[i];
 }
