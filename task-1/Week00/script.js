@@ -100,32 +100,29 @@ console.log(numbers);
 
 // Удалите все отрицательные числа из массива
 
-let index = 0;
-for (index = 0; index < numbers.length; index++) {
-  if (numbers[index] < 0) {
-    console.log(index);
-    // numbers.splice(index); // ---------------------- удаляет весь массив;
-    // numbers.splice(index, 1); // ---------------------- удаляет через один отрицательные значения
-  }
-}
+// let index = 0;
+// for (index = 0; index < numbers.length; index++) {
+//   if (numbers[index] < 0) {
+//     console.log(index);
+//     // numbers.splice(index); // ---------------------- удаляет весь массив;
+//     numbers.splice(index, 1); // ---------------------- удаляет через один отрицательные значения
+//   }
+// }
+// console.log(numbers);
+
+let numbersRight = numbers.filter(elem => elem > 0); // ------ создаём новый массив из положительных чисел
+numbers = numbersRight;
 console.log(numbers);
 
 // Возведите каждое число в квадрат
 
-let numbers2 = []; // ------------------------ создаю новый массив для следующих заданий
-let n = 1;
-for (n = 1; n <= 10; n++) {
-  numbers2.push(n);
+for (let f = 0; f < numbers.length; f++) {
+  numbers[f] = numbers[f] ** 2; // ------------ переписываю каждый элемент на его квадрат
 }
-console.log(numbers2);
-
-for (let f = 0; f < numbers2.length; f++) {
-  numbers2[f] = numbers2[f] ** 2; // ------------ переписываю каждый элемент на его квадрат
-}
-console.log(numbers2);
+console.log(numbers);
 
 // Отсортируйте числа в порядке убывания
-numbers2.reverse();
-console.log(numbers2);
+numbers.reverse();
+console.log(numbers);
 
 // Выведите полученный массив numbers в консоль
