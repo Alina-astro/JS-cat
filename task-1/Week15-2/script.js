@@ -29,6 +29,8 @@ const getWeather = () => {
     } else {
       temp = `${WEATHER[i]}`;
     }
+    // можно заменить на тернарный оператор:
+    // let temp = WEATHER[i] > 0 ? `+${WEATHER[i]}` : `${WEATHER[i]}`;
     divWeather.insertAdjacentHTML(
       "beforebegin",
       `<p>${CITIES[i]}: ${temp}&deg;C</p>`
