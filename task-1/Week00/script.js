@@ -54,10 +54,8 @@ const arrCats = [
 
 let i = 0;
 function nextImage() {
-  if (i < arrCats.length) {
+  if (i < arrCats.length - 1) {
     i++;
-  } else {
-    img.src = arrCats[arrCats.length - 1];
   }
   img.src = arrCats[i];
 }
