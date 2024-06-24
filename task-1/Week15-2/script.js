@@ -8,7 +8,7 @@ const CITIES = [
   "Singapore",
 ];
 //----------------------------------------------- создаём пустой массив для температуры городов
-let WEATHER = [];
+const WEATHER = [];
 //----------------------------------------------- создаём окно пользователя для введения температуры для городов
 for (let city of CITIES) {
   let temp = prompt(`Enter the temperature for the city ${city}`);
