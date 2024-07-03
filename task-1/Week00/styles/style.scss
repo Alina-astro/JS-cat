@@ -152,5 +152,51 @@ body {
         cursor: pointer;
       }
     }
+    //-----------------------------------------------------FORM
+    .user-form__wrap {
+      width: 40vw;
+      margin: 50px auto;
+      border: 2px dotted rgba(248, 134, 172, 0.603);
+      border-radius: 10px;
+      .user-form {
+        margin: 30px auto;
+        width: 30vw;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        input {
+          background-color: rgba(139, 52, 81, 0.603);
+          color: azure;
+          border-radius: 10px;
+          border: 2px solid rgba(68, 65, 66, 0.603);
+          height: 30px;
+          padding-left: 10px;
+        }
+        input::-webkit-input-placeholder {
+          color: rgb(255, 214, 243);
+        }
+        input::-moz-placeholder {
+          color: rgb(255, 214, 243);
+        }
+        .checkbox-agreement {
+          margin: 10px 0px;
+          color: rgb(255, 214, 243);
+          input {
+            height: auto;
+          }
+        }
+        .user-form__button {
+          margin: 0 auto;
+          width: 100px;
+          height: 33px;
+          border-radius: 10px;
+          background-color: rgba(139, 52, 81, 0.603);
+          color: rgb(255, 214, 243);
+          font-size: 15px;
+          cursor: pointer;
+        }
+      }
+    }
+    //---------------------------------------------------------
   }
 }
