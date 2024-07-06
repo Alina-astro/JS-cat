@@ -150,18 +150,18 @@ body main .box-input button {
 }
 body main .user-form__wrap {
   width: 40vw;
-  margin: 50px auto;
+  margin: 50px auto 150px auto;
   border: 2px dotted rgba(248, 134, 172, 0.603);
   border-radius: 10px;
 }
-body main .user-form__wrap .user-form {
+body main .user-form__wrap #user-form {
   margin: 30px auto;
   width: 30vw;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-body main .user-form__wrap .user-form input {
+body main .user-form__wrap #user-form .input {
   background-color: rgba(139, 52, 81, 0.603);
   color: azure;
   border-radius: 10px;
@@ -169,26 +169,43 @@ body main .user-form__wrap .user-form input {
   height: 30px;
   padding-left: 10px;
 }
-body main .user-form__wrap .user-form input::-webkit-input-placeholder {
+body main .user-form__wrap #user-form .input::-webkit-input-placeholder {
   color: rgb(255, 214, 243);
 }
-body main .user-form__wrap .user-form input::-moz-placeholder {
+body main .user-form__wrap #user-form .input::-moz-placeholder {
   color: rgb(255, 214, 243);
 }
-body main .user-form__wrap .user-form .checkbox-agreement {
+body main .user-form__wrap #user-form .userGender {
+  color: rgb(255, 214, 243);
+  margin: 0px 0px 10px 0px;
+}
+body main .user-form__wrap #user-form .userCity {
+  margin: 0px 0px 15px 0px;
+  color: rgb(255, 214, 243);
+}
+body main .user-form__wrap #user-form .userCity #userCity {
+  height: 36px;
+  width: 50%;
+  padding-left: 10px;
+  background-color: rgba(139, 52, 81, 0.603);
+  color: rgb(255, 214, 243);
+  border-radius: 10px;
+  border: 2px solid rgba(68, 65, 66, 0.603);
+}
+body main .user-form__wrap #user-form .checkbox-agreement {
   margin: 10px 0px;
   color: rgb(255, 214, 243);
 }
-body main .user-form__wrap .user-form .checkbox-agreement input {
+body main .user-form__wrap #user-form .checkbox-agreement input {
   height: auto;
 }
-body main .user-form__wrap .user-form .user-form__button {
-  margin: 0 auto;
+body main .user-form__wrap #user-form .user-form__button {
+  margin: 10px auto;
   width: 100px;
-  height: 33px;
+  height: 40px;
   border-radius: 10px;
   background-color: rgba(139, 52, 81, 0.603);
   color: rgb(255, 214, 243);
-  font-size: 15px;
+  font-size: 20px;
   cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

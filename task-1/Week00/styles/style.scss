@@ -155,16 +155,16 @@ body {
     //-----------------------------------------------------FORM
     .user-form__wrap {
       width: 40vw;
-      margin: 50px auto;
+      margin: 50px auto 150px auto;
       border: 2px dotted rgba(248, 134, 172, 0.603);
       border-radius: 10px;
-      .user-form {
+      #user-form {
         margin: 30px auto;
         width: 30vw;
         display: flex;
         flex-direction: column;
         gap: 10px;
-        input {
+        .input {
           background-color: rgba(139, 52, 81, 0.603);
           color: azure;
           border-radius: 10px;
@@ -172,11 +172,28 @@ body {
           height: 30px;
           padding-left: 10px;
         }
-        input::-webkit-input-placeholder {
+        .input::-webkit-input-placeholder {
           color: rgb(255, 214, 243);
         }
-        input::-moz-placeholder {
+        .input::-moz-placeholder {
           color: rgb(255, 214, 243);
+        }
+        .userGender {
+          color: rgb(255, 214, 243);
+          margin: 0px 0px 10px 0px;
+        }
+        .userCity {
+          margin: 0px 0px 15px 0px;
+          color: rgb(255, 214, 243);
+          #userCity {
+            height: 36px;
+            width: 50%;
+            padding-left: 10px;
+            background-color: rgba(139, 52, 81, 0.603);
+            color: rgb(255, 214, 243);
+            border-radius: 10px;
+            border: 2px solid rgba(68, 65, 66, 0.603);
+          }
         }
         .checkbox-agreement {
           margin: 10px 0px;
@@ -186,13 +203,13 @@ body {
           }
         }
         .user-form__button {
-          margin: 0 auto;
+          margin: 10px auto;
           width: 100px;
-          height: 33px;
+          height: 40px;
           border-radius: 10px;
           background-color: rgba(139, 52, 81, 0.603);
           color: rgb(255, 214, 243);
-          font-size: 15px;
+          font-size: 20px;
           cursor: pointer;
         }
       }

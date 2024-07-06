@@ -59,12 +59,28 @@
         </div>
         <!----------------------------------- Form --------------->
         <div class="user-form__wrap">
-            <form name="user-form" class="user-form">
-                <input type="text" name="username" class="input-name" placeholder="Введите имя">
-                <input type="date" name="birthday" class="input-birthday" placeholder="Введите дату рождения">
-                <input type="tel" name="phone" class="input-phone" placeholder="Введите номер телефона">
-                <input type="email" name="email" class="input-email" placeholder="Введите адрес эл. почты">
-                <div class="checkbox-agreement"><input type="checkbox" name="checkbox" class="input-checkbox"> Я
+            <form name="userForm" id="user-form">
+                <input type="text" name="username" class="input" placeholder="Введите имя">
+                <input type="date" name="birthday" class="input" placeholder="Введите дату рождения">
+                <input type="tel" name="phone" class="input" placeholder="Введите номер телефона">
+                <input type="email" name="email" class="input" placeholder="Введите адрес эл. почты">
+                <div class="userGender">
+                    <p>Выберите пол</p>
+                    <input type="radio" id="userWoman" name="userGender" value="userWoman" />
+                    <label for="userWoman">Женщина</label>
+                    <input type="radio" id="userMan" name="userGender" value="userMan" />
+                    <label for="userMan">Мужчина</label>
+                </div>
+                <div class="userCity">
+                    <p>Выберите город</p>
+                    <select form="user-form" id="userCity">
+                        <option value='Moscow'>Москва</option>
+                        <option value='St.Peterburg'>Санкт-Петербург</option>
+                        <option value='Ekaterinburg'>Екатеринбург</option>
+                        <option value='Other'>Другие</option>
+                    </select>
+                </div>
+                <div class="checkbox-agreement"><input type="checkbox" name="checkbox" class="input"> Я
                     согласен
                     получать рассылки и предложения</div>
                 <button class="user-form__button">SEND</button>

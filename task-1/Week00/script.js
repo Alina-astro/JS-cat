@@ -109,7 +109,7 @@ console.log(numbers);
 // console.log(numbers);
 
 let numbersRight = numbers.filter(elem => elem > 0); // ------ создаём новый массив из положительных чисел
-numbers = numbersRight;
+numbers = numbersRight; // -------------------------------- присваиваем первому массиву значения нового массива
 console.log(numbers);
 
 // Возведите каждое число в квадрат
@@ -124,3 +124,23 @@ numbers.reverse();
 console.log(numbers);
 
 // Выведите полученный массив numbers в консоль
+
+// ------------------------- WEEK 16 test --------------------------------------//
+const userForm = document.forms.userForm;
+const userName = userForm.elements.username;
+const userBthd = userForm.elements.birthday;
+const userPhone = userForm.elements.phone;
+const userEmail = userForm.elements.email;
+const userAgreement = userForm.elements.checkbox;
+const buttonForm = document.querySelector(".user-form__button");
+const inputFields = document.querySelectorAll(".input");
+
+inputFields.forEach(function (input) {
+  input.addEventListener("focus", function () {
+    input.style.border = "3px solid #ee82ee"; // -------------- изменение границы при фокусе
+  });
+
+  input.addEventListener("blur", function () {
+    input.style.border = ""; //-------------------------------- восстановление стандартной границы после потери фокуса
+  });
+});
