@@ -131,10 +131,20 @@ const userName = userForm.elements.username;
 const userBthd = userForm.elements.birthday;
 const userPhone = userForm.elements.phone;
 const userEmail = userForm.elements.email;
+const userGender = userForm.elements.userGender;
 const userAgreement = userForm.elements.checkbox;
 const buttonForm = document.querySelector(".user-form__button");
 const inputFields = document.querySelectorAll(".input");
 
+const usernameError = document.getElementById("usernameError");
+const birthdayError = document.getElementById("birthdayError");
+const phoneError = document.getElementById("phoneError");
+const emailError = document.getElementById("emailError");
+const userGenderError = document.getElementById("userGenderError");
+const agreementError = document.getElementById("agreementError");
+const successForm = document.getElementById("successForm");
+
+//---------------------------------------------- не работает
 inputFields.forEach(function (input) {
   input.addEventListener("focus", function () {
     input.style.border = "3px solid #ee82ee"; // -------------- изменение границы при фокусе
@@ -144,3 +154,74 @@ inputFields.forEach(function (input) {
     input.style.border = ""; //-------------------------------- восстановление стандартной границы после потери фокуса
   });
 });
+//--------------------------------------------------------------
+
+userForm.addEventListener("submit", function (evt) {
+  evt.preventDefault();
+  let hasError = false;
+
+  // Очистка предыдущих сообщений об ошибках
+  usernameError.style.display = "none";
+  birthdayError.style.display = "none";
+  phoneError.style.display = "none";
+  emailError.style.display = "none";
+  userGenderError.style.display = "none";
+  agreementError.style.display = "none";
+  successForm.style.display = "none";
+
+  if (validateName(userName.value) === false) {
+    usernameError.textContent = "Введите корректное имя пользователя.";
+    usernameError.style.display = "block";
+    hasError = true;
+  }
+
+  if (userBthd.value === "") {
+    birthdayError.textContent = "Введите дату рождения.";
+    birthdayError.style.display = "block";
+    hasError = true;
+  }
+
+  if (validatePhone(userPhone.value) === false) {
+    phoneError.textContent = "Введите корректный номер телефона.";
+    phoneError.style.display = "block";
+    hasError = true;
+  }
+
+  if (validateEmail(userEmail.value) === false) {
+    emailError.textContent = "Введите корректный email.";
+    emailError.style.display = "block";
+    hasError = true;
+  }
+
+  if (userGender.checked === "") {
+    userGenderError.textContent = "Необходимо согласие с условиями.";
+    userGenderError.style.display = "block";
+    hasError = true;
+  }
+
+  if (userAgreement.checked === false) {
+    agreementError.textContent = "Необходимо согласие с условиями.";
+    agreementError.style.display = "block";
+    hasError = true;
+  }
+
+  if (hasError === false) {
+    successForm.textContent = "Форма успешно отправлена!";
+    successForm.style.display = "block";
+  }
+});
+
+function validateName(name) {
+  let regex = /^[А-Яа-я]{3,}$/;
+  return regex.test(name);
+}
+
+function validatePhone(phone) {
+  let regex = /^[0-9]{11,}$/;
+  return regex.test(phone);
+}
+
+function validateEmail(email) {
+  let regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  return regex.test(email);
+}

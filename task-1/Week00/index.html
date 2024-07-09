@@ -61,15 +61,20 @@
         <div class="user-form__wrap">
             <form name="userForm" id="user-form">
                 <input type="text" name="username" class="input" placeholder="Введите имя">
+                <div class="error" id="usernameError"></div>
                 <input type="date" name="birthday" class="input" placeholder="Введите дату рождения">
+                <div class="error" id="birthdayError"></div>
                 <input type="tel" name="phone" class="input" placeholder="Введите номер телефона">
+                <div class="error" id="phoneError"></div>
                 <input type="email" name="email" class="input" placeholder="Введите адрес эл. почты">
+                <div class="error" id="emailError"></div>
                 <div class="userGender">
                     <p>Выберите пол</p>
-                    <input type="radio" id="userWoman" name="userGender" value="userWoman" />
+                    <input type="radio" id="userWoman" name="userGender" value="userWoman" checked />
                     <label for="userWoman">Женщина</label>
                     <input type="radio" id="userMan" name="userGender" value="userMan" />
                     <label for="userMan">Мужчина</label>
+                    <div class="error" id="userGenderError"></div>
                 </div>
                 <div class="userCity">
                     <p>Выберите город</p>
@@ -83,7 +88,9 @@
                 <div class="checkbox-agreement"><input type="checkbox" name="checkbox" class="input"> Я
                     согласен
                     получать рассылки и предложения</div>
-                <button class="user-form__button">SEND</button>
+                <div class="error" id="agreementError"></div>
+                <button type="submit" class="user-form__button">SEND</button>
+                <div class="successForm" id="successForm"></div>
             </form>
         </div>
         <!--------------------------------------------------------->

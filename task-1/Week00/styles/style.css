@@ -199,6 +199,15 @@ body main .user-form__wrap #user-form .checkbox-agreement {
 body main .user-form__wrap #user-form .checkbox-agreement input {
   height: auto;
 }
+body main .user-form__wrap #user-form .error {
+  color: rgb(196, 189, 0);
+  display: none;
+}
+body main .user-form__wrap #user-form .successForm {
+  color: rgb(42, 119, 0);
+  display: none;
+  text-align: center;
+}
 body main .user-form__wrap #user-form .user-form__button {
   margin: 10px auto;
   width: 100px;

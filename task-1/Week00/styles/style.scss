@@ -202,6 +202,16 @@ body {
             height: auto;
           }
         }
+        .error {
+          color: rgb(196, 189, 0);
+          display: none;
+        }
+        .successForm {
+          color: rgb(42, 119, 0);
+          display: none;
+          text-align: center;
+        }
+
         .user-form__button {
           margin: 10px auto;
           width: 100px;
