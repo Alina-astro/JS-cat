@@ -144,7 +144,6 @@ const userGenderError = document.getElementById("userGenderError");
 const agreementError = document.getElementById("agreementError");
 const successForm = document.getElementById("successForm");
 
-//---------------------------------------------- не работает
 inputFields.forEach(function (input) {
   input.addEventListener("focus", function () {
     input.style.border = "3px solid #ee82ee"; // -------------- изменение границы при фокусе
@@ -154,7 +153,6 @@ inputFields.forEach(function (input) {
     input.style.border = ""; //-------------------------------- восстановление стандартной границы после потери фокуса
   });
 });
-//--------------------------------------------------------------
 
 userForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
@@ -193,12 +191,6 @@ userForm.addEventListener("submit", function (evt) {
     hasError = true;
   }
 
-  if (userGender.checked === "") {
-    userGenderError.textContent = "Необходимо согласие с условиями.";
-    userGenderError.style.display = "block";
-    hasError = true;
-  }
-
   if (userAgreement.checked === false) {
     agreementError.textContent = "Необходимо согласие с условиями.";
     agreementError.style.display = "block";
@@ -208,6 +200,9 @@ userForm.addEventListener("submit", function (evt) {
   if (hasError === false) {
     successForm.textContent = "Форма успешно отправлена!";
     successForm.style.display = "block";
+    inputFields.forEach(function (input) {
+      input.value = ""; //---- Очищаем поле ввода после добавления задачи
+    });
   }
 });
 
