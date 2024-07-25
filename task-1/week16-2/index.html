@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="shortcut icon" href="./assets/icons/icon.png" type="image/png">
+    <link rel="stylesheet" href="./assets/styles/normalize.css">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Заполните форму</h1>
+    </header>
+    <main>
+        <div class="user-form__wrap">
+            <form name="userForm" id="userForm">
+                <input type="text" name="username" class="input" placeholder="Введите имя" required />
+                <div class="error" id="usernameError"></div>
+
+
+                <input type="email" name="email" class="input" placeholder="Введите адрес эл. почты" required />
+                <div class="error" id="emailError"></div>
+
+                <input type="number" name="age" class="input" placeholder="Укажите возраст" required />
+                <div class="error" id="ageError"></div>
+
+                <div class="userGender">
+                    <label>Выберите пол</label>
+                    <input type="radio" id="female" name="userGender" value="female" checked required />
+                    <label for="female">Женщина</label>
+                    <input type="radio" id="male" name="userGender" value="male" />
+                    <label for="male">Мужчина</label>
+                    <div class="error" id="userGenderError"></div>
+                </div>
+                <div class="userProf">
+                    <label>Выберите профессию</label>
+                    <select form="user-form" id="userProfession" required>
+                        <option value='Programmer'>Программист</option>
+                        <option value='Designer'>Дизайнер</option>
+                        <option value='Teacher'>Учитель</option>
+                        <option value='Doctor'>Врач</option>
+                        <option value='Engineer'>Инженер</option>
+                        <option value='Salesperson'>Продавец</option>
+                        <option value='Other'>Другое</option>
+                    </select>
+                </div>
+
+                <input type="password" name="password" class="input" placeholder="Введите пароль" required>
+                <div class="error" id="passwordError"></div>
+
+                <div class="checkbox-agreement">
+                    <input type="checkbox" name="checkbox" class="input" required> Я
+                    согласен
+                    на обработку персональных данных</div>
+                <div class="error" id="agreementError"></div>
+
+                <button type="submit" class="user-form__button">Отправить</button>
+                <div class="successForm" id="successForm"></div>
+            </form>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>
