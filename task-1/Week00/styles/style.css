@@ -168,6 +168,7 @@ body main .user-form__wrap #user-form .input {
   border: 2px solid rgba(68, 65, 66, 0.603);
   height: 30px;
   padding-left: 10px;
+  outline: none;
 }
 body main .user-form__wrap #user-form .input::-webkit-input-placeholder {
   color: rgb(255, 214, 243);

@@ -28,18 +28,23 @@ body main .user-form__wrap #userForm {
   gap: 20px;
 }
 body main .user-form__wrap #userForm .input {
+  box-sizing: border-box;
+  padding-left: 10px;
+  height: 40px;
   background-color: rgba(139, 52, 103, 0.603);
   color: rgb(255, 255, 255);
   border-radius: 10px;
   border: 2px solid rgba(68, 65, 66, 0.603);
-  height: 30px;
-  padding-left: 10px;
+  outline: none;
 }
 body main .user-form__wrap #userForm .input::-webkit-input-placeholder {
   color: rgb(159, 92, 140);
 }
 body main .user-form__wrap #userForm .input::-moz-placeholder {
   color: rgb(159, 92, 140);
+}
+body main .user-form__wrap #userForm .input:focus {
+  border: none;
 }
 body main .user-form__wrap #userForm .userGender {
   color: rgb(159, 92, 140);

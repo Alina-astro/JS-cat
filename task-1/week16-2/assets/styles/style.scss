@@ -28,18 +28,23 @@ body {
         flex-direction: column;
         gap: 20px;
         .input {
+          box-sizing: border-box;
+          padding-left: 10px;
+          height: 40px;
           background-color: rgba(139, 52, 103, 0.603);
           color: rgb(255, 255, 255);
           border-radius: 10px;
           border: 2px solid rgba(68, 65, 66, 0.603);
-          height: 30px;
-          padding-left: 10px;
+          outline: none;
         }
         .input::-webkit-input-placeholder {
           color: rgb(159, 92, 140);
         }
         .input::-moz-placeholder {
           color: rgb(159, 92, 140);
+        }
+        .input:focus {
+          border: none;
         }
         .userGender {
           color: rgb(159, 92, 140);
@@ -91,6 +96,10 @@ body {
           font-size: 20px;
           cursor: pointer;
         }
+        // .disabled {
+        //   background-color: rgba(139, 52, 103, 0.226);
+        //   color: rgb(160, 160, 160);
+        // }
       }
     }
   }

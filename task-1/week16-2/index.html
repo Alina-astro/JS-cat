@@ -17,12 +17,14 @@
     </header>
     <main>
         <div class="user-form__wrap">
-            <form name="userForm" id="userForm">
-                <input type="text" name="username" class="input" placeholder="Введите имя" required />
+            <form name="userForm" id="userForm" novalidate>
+                <input type="text" name="username" class="input" placeholder="Введите имя" autocomplete="off"
+                    required />
                 <div class="error" id="usernameError"></div>
 
 
-                <input type="email" name="email" class="input" placeholder="Введите адрес эл. почты" required />
+                <input type="email" name="email" class="input" placeholder="Введите адрес эл. почты" autocomplete="off"
+                    required />
                 <div class="error" id="emailError"></div>
 
                 <input type="number" name="age" class="input" placeholder="Укажите возраст" required />
@@ -30,15 +32,14 @@
 
                 <div class="userGender">
                     <label>Выберите пол</label>
-                    <input type="radio" id="female" name="userGender" value="female" checked required />
+                    <input type="radio" id="female" name="gender" value="female" checked required />
                     <label for="female">Женщина</label>
-                    <input type="radio" id="male" name="userGender" value="male" />
+                    <input type="radio" id="male" name="gender" value="male" />
                     <label for="male">Мужчина</label>
-                    <div class="error" id="userGenderError"></div>
                 </div>
                 <div class="userProf">
                     <label>Выберите профессию</label>
-                    <select form="user-form" id="userProfession" required>
+                    <select form="userForm" name="profession" id="userProfession" required>
                         <option value='Programmer'>Программист</option>
                         <option value='Designer'>Дизайнер</option>
                         <option value='Teacher'>Учитель</option>
@@ -49,7 +50,8 @@
                     </select>
                 </div>
 
-                <input type="password" name="password" class="input" placeholder="Введите пароль" required>
+                <input type="password" name="password" class="input" placeholder="Введите пароль" minlength="8"
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}" autocomplete="off" required>
                 <div class="error" id="passwordError"></div>
 
                 <div class="checkbox-agreement">

@@ -201,7 +201,7 @@ userForm.addEventListener("submit", function (evt) {
     successForm.textContent = "Форма успешно отправлена!";
     successForm.style.display = "block";
     inputFields.forEach(function (input) {
-      input.value = ""; //---- Очищаем поле ввода после добавления задачи
+      input.value = ""; //-----Очищаем поле ввода после добавления задачи
     });
   }
 });
