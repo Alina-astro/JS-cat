@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto calculate</title>
+    <link rel="shortcut icon" href="./assets/icons/car-icon.png" type="image/png">
+    <link rel="stylesheet" href="./assets/styles/normalize.css">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Калькулятор стоимости</h1>
+    </header>
+    <main>
+        <div class="form-wrap">
+            <form name="carPrice" id="carPrice" novalidate>
+                <div class="select-wrap">
+                    <label>Марка автомобиля</label>
+                    <select form="carPrice" name="brand" id="carBrand" class="select">
+                        <option value='Audi'>Audi</option>
+                        <option value='BMW'>BMW</option>
+                        <option value='Mercedes-Benz'>Mercedes-Benz</option>
+                        <option value='Porsche'>Porsche</option>
+                    </select>
+                </div>
+                <div class="select-wrap">
+                    <label>Модель автомобиля</label>
+                    <select form="carPrice" name="model" id="carModelAudi" class="select">
+                        <option value='A6'>A6</option>
+                        <option value='A8'>A8</option>
+                        <option value='Q5'>Q5</option>
+                        <option value='e-tron'>e-tron</option>
+                    </select>
+                </div>
+                <div class="select-wrap">
+                    <label>Модель автомобиля</label>
+                    <select form="carPrice" name="model" id="carModelBmw" class="select">
+                        <option value='M5'>M5</option>
+                        <option value='X5'>X5</option>
+                        <option value='iX'>iX</option>
+                        <option value='5 серия GT'>5 серия GT</option>
+                    </select>
+                </div>
+                <div class="select-wrap">
+                    <label>Модель автомобиля</label>
+                    <select form="carPrice" name="model" id="carModelMercedes" class="select">
+                        <option value='E-class'>E-class</option>
+                        <option value='Maybach S-class'>Maybach S-class</option>
+                        <option value='GLC-class'>GLC-class</option>
+                        <option value='EQS'>EQS</option>
+                    </select>
+                </div>
+                <div class="select-wrap">
+                    <label>Модель автомобиля</label>
+                    <select form="carPrice" name="model" id="carModelPosche" class="select">
+                        <option value='Panamera'>Panamera</option>
+                        <option value='Cayenne'>Cayenne</option>
+                        <option value='Macan'>Macan</option>
+                        <option value='Taycan AT'>Taycan AT</option>
+                    </select>
+                </div>
+                <div class="select-wrap">
+                    <label>Объём двигателя, л</label>
+                    <input type="number" id="volume" name="volume" min="1.1" max="3.5" step="0.1" />
+                </div>
+                <div class="checkbox-wrap">
+                    <p>Тип двигателя</p>
+                    <div class="checkbox-wrap__radio">
+                        <input type="radio" id="petrol" name="motor" value="petrol" checked />
+                        <label for="petrol">бензин</label>
+                        <input type="radio" id="diesel" name="motor" value="diesel" />
+                        <label for="diesel">дизель</label>
+                        <input type="radio" id="electric" name="motor" value="electric" />
+                        <label for="electric">электро</label>
+                    </div>
+                </div>
+                <div class="checkbox-wrap">
+                    <p>Тип автомобиля</p>
+                    <div class="checkbox-wrap__radio">
+                        <input type="radio" id="newCar" name="type" value="new" checked />
+                        <label for="new">новый</label>
+                        <input type="radio" id="usedCar" name="type" value="used" />
+                        <label for="used">с пробегом</label>
+                    </div>
+                </div>
+                <div class="checkbox-wrap">
+                    <p>Владельцев по ПТС</p>
+                    <div class="checkbox-wrap__radio">
+                        <input type="radio" id="one-two" name="owners" value="one-two" checked />
+                        <label for="one-two">1-2</label>
+                        <input type="radio" id="more_three" name="owners" value="more three" />
+                        <label for="more three">более 3х</label>
+                    </div>
+                </div>
+                <div class="checkbox-wrap">
+                    <p>Состояние</p>
+                    <div class="checkbox-wrap__radio">
+                        <input type="checkbox" id="brokenCar" name="broken" />
+                        <label>битая</label>
+                    </div>
+                </div>
+                <div class="checkbox-wrap">
+                    <label>Способ оплаты</label>
+                    <div class="pay-wrap">
+                        <div>
+                            <input type="radio" id="card" name="payment" value="card" checked />
+                            <label for="card">карта</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="cash" name="payment" value="cash" />
+                            <label for="cash">наличные</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="invoice" name="payment" value="invoice" />
+                            <label for="invoice">счёт на юр. лицо</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" id="getPrice">РАССЧИТАТЬ</button>
+            </form>
+    </main>
+    <footer></footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>

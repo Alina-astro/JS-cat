@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+body {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  background-color: rgba(32, 2, 26, 0.937);
+  color: rgb(234, 192, 222);
+  font-family: "Montserrat", monospace;
+  header {
+    h1 {
+      color: rgb(158, 113, 145);
+      text-align: center;
+    }
+  }
+  main {
+    .form-wrap {
+      width: 48vw;
+      margin: 50px auto 150px auto;
+      border: 3px dotted rgb(197, 176, 101);
+      border-radius: 10px;
+      #carPrice {
+        margin: 30px auto;
+        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        color: rgb(159, 92, 140);
+        .select-wrap {
+          margin: 0px 0px 15px 0px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .select,
+          #volume {
+            box-sizing: border-box;
+            height: 36px;
+            width: 55%;
+            padding-left: 10px;
+            background-color: rgba(139, 52, 103, 0.603);
+            color: rgb(255, 255, 255);
+            border-radius: 10px;
+            border: 2px solid rgba(68, 65, 66, 0.603);
+            outline: none;
+          }
+        }
+        .checkbox-wrap {
+          margin: 0px 0px 15px 0px;
+          display: flex;
+          justify-content: space-between;
+          .checkbox-wrap__radio {
+            width: 55%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            input {
+              margin: 0 5px 0 10px;
+            }
+          }
+          .pay-wrap {
+            width: 55%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            input {
+              margin: 0 5px 0 10px;
+            }
+          }
+        }
+        #getPrice {
+          margin: 10px auto;
+          width: 200px;
+          height: 50px;
+          border-radius: 10px;
+          background-color: rgba(139, 52, 103, 0.603);
+          color: rgb(255, 255, 255);
+          font-size: 16px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
