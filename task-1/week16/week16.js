@@ -371,18 +371,17 @@ select.addEventListener("change", function () {
   } else {
     formOne.style.backgroundColor = "lime";
   }
-
-  //   if (select.selectedIndex === 0) {
-  //     formOne.style.backgroundColor = "gold";
-  //   }
-  //   if (select.selectedIndex === 1) {
-  //     formOne.style.backgroundColor = "pink";
-  //   }
-  //   if (select.selectedIndex === 2) {
-  //     formOne.style.backgroundColor = "lime";
-  //   }
-  //   console.log(select.value);
 });
+//   if (select.selectedIndex === 0) {
+//     formOne.style.backgroundColor = "gold";
+//   }
+//   if (select.selectedIndex === 1) {
+//     formOne.style.backgroundColor = "pink";
+//   }
+//   if (select.selectedIndex === 2) {
+//     formOne.style.backgroundColor = "lime";
+//   }
+//   console.log(select.value);
 
 //Задание 20
 //Добавьте валидацию для поля Email

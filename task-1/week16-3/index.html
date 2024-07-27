@@ -35,28 +35,19 @@
                         <option value='Q5'>Q5</option>
                         <option value='e-tron'>e-tron</option>
                     </select>
-                </div>
-                <div class="select-wrap">
-                    <label>Модель автомобиля</label>
                     <select form="carPrice" name="model" id="carModelBmw" class="select">
                         <option value='M5'>M5</option>
                         <option value='X5'>X5</option>
                         <option value='iX'>iX</option>
                         <option value='5 серия GT'>5 серия GT</option>
                     </select>
-                </div>
-                <div class="select-wrap">
-                    <label>Модель автомобиля</label>
                     <select form="carPrice" name="model" id="carModelMercedes" class="select">
                         <option value='E-class'>E-class</option>
                         <option value='Maybach S-class'>Maybach S-class</option>
                         <option value='GLC-class'>GLC-class</option>
                         <option value='EQS'>EQS</option>
                     </select>
-                </div>
-                <div class="select-wrap">
-                    <label>Модель автомобиля</label>
-                    <select form="carPrice" name="model" id="carModelPosche" class="select">
+                    <select form="carPrice" name="model" id="carModelPorsche" class="select">
                         <option value='Panamera'>Panamera</option>
                         <option value='Cayenne'>Cayenne</option>
                         <option value='Macan'>Macan</option>
@@ -78,31 +69,31 @@
                         <label for="electric">электро</label>
                     </div>
                 </div>
-                <div class="checkbox-wrap">
+                <div class="checkbox-wrap carType">
                     <p>Тип автомобиля</p>
                     <div class="checkbox-wrap__radio">
-                        <input type="radio" id="newCar" name="type" value="new" checked />
+                        <input type="radio" id="newCar" name="typeCar" value="new" />
                         <label for="new">новый</label>
-                        <input type="radio" id="usedCar" name="type" value="used" />
+                        <input type="radio" id="usedCar" name="typeCar" value="used" />
                         <label for="used">с пробегом</label>
                     </div>
                 </div>
-                <div class="checkbox-wrap">
+                <!-- <div class="checkbox-wrap">
                     <p>Владельцев по ПТС</p>
                     <div class="checkbox-wrap__radio">
                         <input type="radio" id="one-two" name="owners" value="one-two" checked />
                         <label for="one-two">1-2</label>
-                        <input type="radio" id="more_three" name="owners" value="more three" />
+                        <input type="radio" id="more_three" name="owners" value="more_three" />
                         <label for="more three">более 3х</label>
                     </div>
-                </div>
-                <div class="checkbox-wrap">
+                </div> -->
+                <!-- <div class="checkbox-wrap">
                     <p>Состояние</p>
                     <div class="checkbox-wrap__radio">
                         <input type="checkbox" id="brokenCar" name="broken" />
                         <label>битая</label>
                     </div>
-                </div>
+                </div> -->
                 <div class="checkbox-wrap">
                     <label>Способ оплаты</label>
                     <div class="pay-wrap">
@@ -120,7 +111,7 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit" id="getPrice">РАССЧИТАТЬ</button>
+                <button type="submit" id="getPriceButton">РАССЧИТАТЬ</button>
             </form>
     </main>
     <footer></footer>

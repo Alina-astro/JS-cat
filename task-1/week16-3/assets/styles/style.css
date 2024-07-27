@@ -70,7 +70,15 @@ body main .form-wrap #carPrice .checkbox-wrap .pay-wrap {
 body main .form-wrap #carPrice .checkbox-wrap .pay-wrap input {
   margin: 0 5px 0 10px;
 }
-body main .form-wrap #carPrice #getPrice {
+body main .form-wrap #carPrice #carModelBmw,
+body main .form-wrap #carPrice #carModelMercedes,
+body main .form-wrap #carPrice #carModelPorsche {
+  display: none;
+}
+body main .form-wrap #carPrice .usedCar {
+  display: none;
+}
+body main .form-wrap #carPrice #getPriceButton {
   margin: 10px auto;
   width: 200px;
   height: 50px;
