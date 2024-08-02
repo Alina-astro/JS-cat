@@ -12,7 +12,7 @@ const carMotor = formCarPrice.elements.motor;
 const typeCar = formCarPrice.elements.typeCar;
 const carType = document.querySelector(".carType");
 
-const divOwners = document.createElement("div");
+// const divOwners = document.createElement("div");
 const divInputsOwners = document.createElement("div");
 const divBroken = document.createElement("div");
 
@@ -56,7 +56,7 @@ function chooseCarModel() {
 }
 
 function addBlockOwners() {
-  carType.after(divOwners);
+  const divOwners = document.createElement("div");
   divOwners.classList.add("checkbox-wrap");
   divOwners.innerHTML = `<p>Владельцев по ПТС</p>
     <div class="checkbox-wrap__radio">
@@ -65,41 +65,8 @@ function addBlockOwners() {
         <input type="radio" id="more_three" name="owners" value="more_three" />
         <label for="more three">более 3х</label>
     </div>`;
-
-  return formCarPrice.elements.owners;
-  // закомментированный код заменен на divOwners.innerHTML
-
-  //   const labelOwners = document.createElement("p");
-  //   divOwners.prepend(labelOwners);
-  //   labelOwners.innerText = "Владельцев по ПТС";
-  //   divOwners.append(divInputsOwners);
-  //   divInputsOwners.classList.add("checkbox-wrap__radio");
+  carType.after(divOwners);
 }
-
-// function addInputOwners() {
-//   const inputOneTwo = document.createElement("input");
-//   inputOneTwo.setAttribute("type", "radio");
-//   inputOneTwo.setAttribute("id", "one-two");
-//   inputOneTwo.setAttribute("name", "owners");
-//   inputOneTwo.setAttribute("value", "one-two");
-//   const labelOneTwo = document.createElement("label");
-//   labelOneTwo.setAttribute("for", "one-two");
-//   labelOneTwo.textContent = "1-2";
-//   divInputsOwners.appendChild(inputOneTwo);
-//   divInputsOwners.appendChild(labelOneTwo);
-
-//   const inputMoreThree = document.createElement("input");
-//   inputMoreThree.setAttribute("type", "radio");
-//   inputMoreThree.setAttribute("id", "more_three");
-//   inputMoreThree.setAttribute("name", "owners");
-//   inputMoreThree.setAttribute("value", "more_three");
-//   inputMoreThree.setAttribute("checked", "true");
-//   const labelMoreThree = document.createElement("label");
-//   labelMoreThree.setAttribute("for", "more_three");
-//   labelMoreThree.textContent = "более 3х";
-//   divInputsOwners.appendChild(inputMoreThree);
-//   divInputsOwners.appendChild(labelMoreThree);
-// }
 
 function addBlockBroken() {
   carType.after(divBroken);

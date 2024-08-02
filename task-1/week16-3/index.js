@@ -1,6 +1,14 @@
 const formCarPrice = document.forms.carPrice;
 const carBrand = formCarPrice.elements.brand;
 const carModel = formCarPrice.elements.model;
+const carVolume = formCarPrice.elements.volume;
+const buttonsMotor = document.querySelectorAll('input[name="motor"]');
+const buttonsCondition = document.querySelectorAll('input[name="condition"]');
+const blockCondition = document.getElementById("block-condition");
+const divOwners = document.createElement("div");
+const divBroken = document.createElement("div");
+const buttonsPay = document.querySelectorAll('input[name="payment"]');
+
 const modelsAudi = [
   { name: "A6", value: "A6" },
   { name: "A8", value: "A8" },
@@ -27,8 +35,22 @@ const modelsPorsche = [
   { name: "Taycan AT", value: "Taycan AT" },
 ];
 
-carBrand.addEventListener("change", () => {
-  console.log(carBrand.value);
+const arrResults = [];
+
+carBrand.addEventListener("change", selectBrand);
+carModel.addEventListener("change", selectModel);
+carVolume.addEventListener("change", selectVolume);
+for (const radioMotor of buttonsMotor) {
+  radioMotor.addEventListener("change", selectMotor);
+}
+for (const radioCondition of buttonsCondition) {
+  radioCondition.addEventListener("change", selectCondition);
+}
+for (const radioPay of buttonsPay) {
+  radioPay.addEventListener("change", selectPayment);
+}
+
+function selectBrand() {
   carModel.innerHTML = "";
   const defaultOption = document.createElement("option");
   defaultOption.textContent = "Выберите модель";
@@ -38,21 +60,27 @@ carBrand.addEventListener("change", () => {
   switch (carBrand.value) {
     case "Audi":
       carModelAdding(modelsAudi, carModel);
+      arrResults[0] = +2000000;
       break;
     case "BMW":
       carModelAdding(modelsBmw, carModel);
+      arrResults[0] = +2500000;
       break;
     case "Mercedes-Benz":
       carModelAdding(modelsMercedes, carModel);
+      arrResults[0] = +3000000;
       break;
     case "Porsche":
       carModelAdding(modelsPorsche, carModel);
+      arrResults[0] = +4000000;
       break;
     default:
       carBrand.style.borderColor = "red";
       break;
   }
-});
+  console.log(carBrand.value);
+  console.log(arrResults[0]);
+}
 
 const carModelAdding = (models, select) => {
   models.forEach(model => {
@@ -62,3 +90,165 @@ const carModelAdding = (models, select) => {
     select.appendChild(option);
   });
 };
+
+function selectModel(e) {
+  console.log(e.target.value);
+  switch (e.target.value) {
+    case "A6":
+      arrResults[1] = 2000000;
+      break;
+    case "A8":
+      arrResults[1] = 3000000;
+      break;
+    case "Q5":
+      arrResults[1] = 4000000;
+      break;
+    case "e-tron":
+      arrResults[1] = 5000000;
+      break;
+    case "M5":
+      arrResults[1] = 2500000;
+      break;
+    case "X5":
+      arrResults[1] = 3500000;
+      break;
+    case "iX":
+      arrResults[1] = 4500000;
+      break;
+    case "5 серия GT":
+      arrResults[1] = 5500000;
+      break;
+    case "E-class":
+      arrResults[1] = 3000000;
+      break;
+    case "Maybach S-class":
+      arrResults[1] = 5000000;
+      break;
+    case "GLC-class":
+      arrResults[1] = 7000000;
+      break;
+    case "EQS":
+      arrResults[1] = 9000000;
+      break;
+    case "Panamera":
+      arrResults[1] = 5000000;
+      break;
+    case "Cayenne":
+      arrResults[1] = 7000000;
+      break;
+    case "Macan":
+      arrResults[1] = 9000000;
+      break;
+    case "Taycan AT":
+      arrResults[1] = 11000000;
+      break;
+  }
+  console.log(arrResults);
+}
+
+function selectVolume() {
+  if (carVolume.value >= 1.1 && carVolume.value < 2.0) {
+    arrResults[2] = 500000;
+  } else if (carVolume.value >= 2.0 && carVolume.value < 3.0) {
+    arrResults[2] = 1000000;
+  } else {
+    arrResults[2] = 2000000;
+  }
+  console.log(arrResults);
+}
+
+function selectMotor(e) {
+  console.log(e.target.value);
+  switch (e.target.value) {
+    case "petrol":
+      arrResults[3] = 1000000;
+      break;
+    case "diesel":
+      arrResults[3] = 2000000;
+      break;
+    case "electric":
+      arrResults[3] = 3000000;
+      break;
+  }
+  console.log(arrResults);
+}
+
+function selectCondition(e) {
+  console.log(e.target.value);
+  if (e.target.value === "new") {
+    divOwners.remove();
+    divBroken.remove();
+    arrResults[4] = 3000000;
+    arrResults[5] = 0;
+    arrResults[6] = 0;
+  } else if (e.target.value === "used") {
+    arrResults[4] = -3000000;
+    arrResults[6] = 0;
+    addButtonsOwners();
+    addCheckboxBroken();
+    const buttonsOwners = document.querySelectorAll('input[name="owners"]');
+    for (const radioOwners of buttonsOwners) {
+      radioOwners.addEventListener("change", selectOwners);
+    }
+    const checkboxBroken = formCarPrice.elements.broken;
+    checkboxBroken.addEventListener("change", checkBrokenCar);
+  } else {
+    console.log("error");
+  }
+  console.log(arrResults);
+}
+
+function addButtonsOwners() {
+  divOwners.classList.add("checkbox-wrap");
+  divOwners.innerHTML = `<div>Владельцев по ПТС</div>
+        <div class="checkbox-wrap__radio">
+            <label><input type="radio" name="owners" value="1-2" /> 1-2</label>
+            <label><input type="radio" name="owners" value="more_3" /> более 3х</label>
+        </div>`;
+  blockCondition.after(divOwners);
+}
+
+function selectOwners(e) {
+  console.log(e.target.value);
+  if (e.target.value === "1-2") {
+    arrResults[5] = -500000;
+  } else if (e.target.value === "more_3") {
+    arrResults[5] = -1500000;
+  } else {
+    console.log("error");
+  }
+  console.log(arrResults);
+}
+
+function addCheckboxBroken() {
+  divBroken.classList.add("checkbox-wrap");
+  divBroken.innerHTML = `<div>Состояние</div>
+  <div class="checkbox-wrap__radio">
+      <label><input type="checkbox" name="broken" /> битая</label>
+  </div>`;
+  divOwners.after(divBroken);
+}
+
+function checkBrokenCar() {
+  if (this.checked) {
+    arrResults[6] =
+      -(arrResults[0] + arrResults[1] + arrResults[2] + arrResults[3]) / 2;
+  } else {
+    arrResults[6] = 0;
+  }
+  console.log(arrResults);
+}
+
+function selectPayment(e) {
+  console.log(e.target.value);
+  if (e.target.value === "card") {
+    arrResults[7] = 500000;
+  } else if (e.target.value === "cash") {
+    arrResults[7] = 0;
+  } else if (e.target.value === "invoice") {
+    arrResults[7] = 1000000;
+  } else {
+    console.log("error");
+  }
+  console.log(arrResults);
+}

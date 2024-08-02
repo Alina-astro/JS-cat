@@ -32,9 +32,6 @@
                     <label for="carModel">Модель автомобиля</label>
                     <select form="carPrice" name="model" id="carModel" class="select">
                         <option selected disabled>Выберите модель</option>
-                        <!-- 
-                        
-                         -->
                     </select>
                 </div>
                 <div class="select-wrap">
@@ -44,33 +41,20 @@
                 <div class="checkbox-wrap">
                     <div>Тип двигателя</div>
                     <div class="checkbox-wrap__radio">
-                        <label><input type="radio" id="petrol" name="motor" value="petrol" /> бензин</label>
-                        <label><input type="radio" id="diesel" name="motor" value="diesel" /> дизель</label>
-                        <label><input type="radio" id="electric" name="motor" value="electric" /> электро</label>
+                        <label><input type="radio" name="motor" value="petrol" /> бензин</label>
+                        <label><input type="radio" name="motor" value="diesel" /> дизель</label>
+                        <label><input type="radio" name="motor" value="electric" /> электро</label>
                     </div>
                 </div>
-                <div class="checkbox-wrap">
+                <div class="checkbox-wrap" id="block-condition">
                     <div>Тип автомобиля</div>
                     <div class="checkbox-wrap__radio">
-                        <label for="newCar"><input type="radio" id="newCar" name="typeCar" value="new" />
+                        <label><input type="radio" name="condition" value="new" />
                             новый</label>
-                        <label for="usedCar"><input type="radio" id="usedCar" name="typeCar" value="used" /> с
+                        <label><input type="radio" name="condition" value="used" /> с
                             пробегом</label>
                     </div>
                 </div>
-                <!-- <div class="checkbox-wrap">
-                    <div>Владельцев по ПТС</div>
-                    <div class="checkbox-wrap__radio">
-                        <label><input type="radio" id="L" name="ownersW" value="one-two" checked /> 1-2</label>
-                        <label><input type="radio" id="R" name="ownersW" value="more_three" /> более 3х</label>
-                    </div>
-                </div> -->
-                <!-- <div class="checkbox-wrap">
-                    <div>Состояние</div>
-                    <div class="checkbox-wrap__radio">
-                        <label><input type="checkbox" id="brokenCar" name="broken" /> битая</label>
-                    </div>
-                </div> -->
                 <div class="checkbox-wrap">
                     <div>Способ оплаты</div>
                     <div class="checkbox-wrap__radio">
