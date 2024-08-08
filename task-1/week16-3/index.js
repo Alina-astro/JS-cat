@@ -79,8 +79,6 @@ function selectBrand() {
       carBrand.style.borderColor = "red";
       break;
   }
-  console.log(carBrand.value);
-  console.log(arrResults[0]);
 }
 
 const carModelAdding = (models, select) => {
@@ -93,7 +91,6 @@ const carModelAdding = (models, select) => {
 };
 
 function selectModel(e) {
-  console.log(e.target.value);
   switch (e.target.value) {
     case "A6":
       arrResults[1] = 2000000;
@@ -144,7 +141,6 @@ function selectModel(e) {
       arrResults[1] = 11000000;
       break;
   }
-  console.log(arrResults);
 }
 
 function selectVolume() {
@@ -155,11 +151,9 @@ function selectVolume() {
   } else {
     arrResults[2] = 2000000;
   }
-  console.log(arrResults);
 }
 
 function selectMotor(e) {
-  console.log(e.target.value);
   switch (e.target.value) {
     case "petrol":
       arrResults[3] = 1000000;
@@ -171,11 +165,9 @@ function selectMotor(e) {
       arrResults[3] = 3000000;
       break;
   }
-  console.log(arrResults);
 }
 
 function selectCondition(e) {
-  console.log(e.target.value);
   if (e.target.value === "new") {
     divOwners.remove();
     divBroken.remove();
@@ -193,10 +185,7 @@ function selectCondition(e) {
     }
     const checkboxBroken = formCarPrice.elements.broken;
     checkboxBroken.addEventListener("change", checkBrokenCar);
-  } else {
-    console.log("error");
   }
-  console.log(arrResults);
 }
 
 function addButtonsOwners() {
@@ -210,15 +199,11 @@ function addButtonsOwners() {
 }
 
 function selectOwners(e) {
-  console.log(e.target.value);
   if (e.target.value === "1-2") {
     arrResults[5] = -500000;
   } else if (e.target.value === "more_3") {
     arrResults[5] = -1500000;
-  } else {
-    console.log("error");
   }
-  console.log(arrResults);
 }
 
 function addCheckboxBroken() {
@@ -237,21 +222,16 @@ function checkBrokenCar() {
   } else {
     arrResults[6] = 0;
   }
-  console.log(arrResults);
 }
 
 function selectPayment(e) {
-  console.log(e.target.value);
   if (e.target.value === "card") {
     arrResults[7] = 500000;
   } else if (e.target.value === "cash") {
     arrResults[7] = 0;
   } else if (e.target.value === "invoice") {
     arrResults[7] = 1000000;
-  } else {
-    console.log("error");
   }
-  console.log(arrResults);
 }
 
 let errors = [];
@@ -347,6 +327,7 @@ function checkAll() {
   if (errors.length == 0) {
     errorsInfo.textContent = "";
     getPrice();
+    getValue();
   }
 }
 
@@ -356,5 +337,28 @@ function getPrice() {
     sum += Number(arrResults[i]);
   }
   let totalPrice = document.querySelector(".calc-result__total-price");
-  totalPrice.textContent = `Итоговая сумма автомобиля: ${sum} рублей`;
+  totalPrice.textContent = `Итоговая сумма автомобиля: ${sum.toLocaleString(
+    "ru-RU"
+  )} ₽`;
+}
+
+function getValue() {
+  let ownersValue = 0;
+  if (formCarPrice.elements.condition.value === "used") {
+    ownersValue = formCarPrice.elements.owners.value;
+  }
+  let brokenValue = false;
+  if (formCarPrice.elements.condition.value === "used") {
+    brokenValue = formCarPrice.elements.broken.checked;
+  }
+  obj = {
+    brand: carBrand.value,
+    model: carModel.value,
+    volume: carVolume.value,
+    condition: formCarPrice.elements.condition.value,
+    owners: ownersValue,
+    broken: brokenValue,
+    payment: formCarPrice.elements.payment.value,
+  };
+  console.log(obj);
 }
