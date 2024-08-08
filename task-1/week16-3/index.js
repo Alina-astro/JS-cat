@@ -8,6 +8,7 @@ const blockCondition = document.getElementById("block-condition");
 const divOwners = document.createElement("div");
 const divBroken = document.createElement("div");
 const buttonsPay = document.querySelectorAll('input[name="payment"]');
+const buttonReset = document.getElementById("resetButton");
 
 const modelsAudi = [
   { name: "A6", value: "A6" },
@@ -337,7 +338,7 @@ function getPrice() {
     sum += Number(arrResults[i]);
   }
   let totalPrice = document.querySelector(".calc-result__total-price");
-  totalPrice.textContent = `Итоговая сумма автомобиля: ${sum.toLocaleString(
+  totalPrice.textContent = `Итоговая стоимость автомобиля: ${sum.toLocaleString(
     "ru-RU"
   )} ₽`;
 }
@@ -362,3 +363,10 @@ function getValue() {
   };
   console.log(obj);
 }
+
+buttonReset.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  formCarPrice.reset();
+  carModel.innerHTML = "";
+  document.querySelector(".calc-result__total-price").innerHTML = "";
+});
