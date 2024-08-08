@@ -30,11 +30,8 @@ function checkAll() {
     let error = checkValidityInput(input);
     if (error) {
       errors.push(error);
+      errorsInfo.innerHTML = errors.join("</br>");
     }
-  }
-
-  if (errors.length > 0) {
-    errorsInfo.innerHTML = errors.join("</br>");
   }
 }
 

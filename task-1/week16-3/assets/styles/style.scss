@@ -104,13 +104,14 @@ body {
         div {
           padding: 10px 4vw;
           text-align: center;
-          font-size: 20px;
         }
         .calc-result__error-message {
           color: $color-text-error;
+          font-size: 18px;
         }
         .calc-result__total-price {
           color: $color-text-white;
+          font-size: 20px;
         }
       }
     }

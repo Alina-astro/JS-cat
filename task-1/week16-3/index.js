@@ -54,6 +54,7 @@ function selectBrand() {
   carModel.innerHTML = "";
   const defaultOption = document.createElement("option");
   defaultOption.textContent = "Выберите модель";
+  defaultOption.value = "";
   defaultOption.selected = true;
   defaultOption.disabled = true;
   carModel.appendChild(defaultOption);
@@ -182,7 +183,7 @@ function selectCondition(e) {
     arrResults[5] = 0;
     arrResults[6] = 0;
   } else if (e.target.value === "used") {
-    arrResults[4] = -3000000;
+    arrResults[4] = -1000000;
     arrResults[6] = 0;
     addButtonsOwners();
     addCheckboxBroken();
@@ -232,7 +233,7 @@ function addCheckboxBroken() {
 function checkBrokenCar() {
   if (this.checked) {
     arrResults[6] =
-      -(arrResults[0] + arrResults[1] + arrResults[2] + arrResults[3]) / 2;
+      -(arrResults[0] + arrResults[1] + arrResults[2] + arrResults[3]) * 0.25;
   } else {
     arrResults[6] = 0;
   }
@@ -251,4 +252,109 @@ function selectPayment(e) {
     console.log("error");
   }
   console.log(arrResults);
+}
+
+let errors = [];
+const getPriceButton = document.getElementById("getPriceButton");
+getPriceButton.addEventListener("click", function (e) {
+  e.preventDefault();
+  checkAll();
+});
+
+function checkValidityInput(elem) {
+  switch (elem.name) {
+    case "brand":
+      if (elem.value === "") {
+        elem.style.borderColor = "red";
+        return "Выберите марку";
+      } else {
+        elem.style.borderColor = "";
+      }
+      break;
+    case "model":
+      if (elem.value === "") {
+        elem.style.borderColor = "red";
+        return "Выберите модель";
+      } else {
+        elem.style.borderColor = "";
+      }
+      break;
+    case "volume":
+      if (elem.value === "") {
+        elem.style.borderColor = "red";
+        return "Выберите объём двигателя";
+      } else {
+        elem.style.borderColor = "";
+      }
+      break;
+  }
+}
+
+function checkValidityRadioButtons() {
+  let motorRadioButtons = [];
+  motorRadioButtons = formCarPrice.elements.motor;
+  if (
+    !motorRadioButtons[0].checked &&
+    !motorRadioButtons[1].checked &&
+    !motorRadioButtons[2].checked
+  ) {
+    return "Выберите тип двигателя";
+  }
+
+  let conditionRadioButtons = [];
+  conditionRadioButtons = formCarPrice.elements.condition;
+  if (!conditionRadioButtons[0].checked && !conditionRadioButtons[1].checked) {
+    return "Выберите тип автомобиля";
+  }
+
+  let ownersRadioButtons = [];
+  ownersRadioButtons = formCarPrice.elements.owners;
+  if (conditionRadioButtons[1].checked) {
+    if (!ownersRadioButtons[0].checked && !ownersRadioButtons[1].checked) {
+      return "Выберите количество владельцев";
+    }
+  }
+
+  let paymentRadioButtons = [];
+  paymentRadioButtons = formCarPrice.elements.payment;
+  if (
+    !paymentRadioButtons[0].checked &&
+    !paymentRadioButtons[1].checked &&
+    !paymentRadioButtons[2].checked
+  ) {
+    return "Выберите способ оплаты";
+  }
+}
+
+function checkAll() {
+  errors = [];
+  let inputs = formCarPrice.elements;
+  let errorsInfo = document.querySelector(".calc-result__error-message");
+  for (let input of inputs) {
+    let error = checkValidityInput(input);
+    if (error) {
+      errors.push(error);
+      errorsInfo.innerHTML = errors.join("</br>");
+    }
+  }
+
+  let errorChoice = checkValidityRadioButtons();
+  if (errorChoice) {
+    errors.push(errorChoice);
+    errorsInfo.innerHTML = errors.join("</br>");
+  }
+
+  if (errors.length == 0) {
+    errorsInfo.textContent = "";
+    getPrice();
+  }
+}
+
+function getPrice() {
+  let sum = 0;
+  for (let i = 0; i < arrResults.length; i++) {
+    sum += Number(arrResults[i]);
+  }
+  let totalPrice = document.querySelector(".calc-result__total-price");
+  totalPrice.textContent = `Итоговая сумма автомобиля: ${sum} рублей`;
 }

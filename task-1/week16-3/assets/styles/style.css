@@ -85,11 +85,12 @@ body main .form-wrap .calc-result {
 body main .form-wrap .calc-result div {
   padding: 10px 4vw;
   text-align: center;
-  font-size: 20px;
 }
 body main .form-wrap .calc-result .calc-result__error-message {
   color: rgb(251, 15, 15);
+  font-size: 18px;
 }
 body main .form-wrap .calc-result .calc-result__total-price {
   color: rgb(255, 255, 255);
+  font-size: 20px;
 }/*# sourceMappingURL=style.css.map */
